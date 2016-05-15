@@ -1,0 +1,10 @@
+# This is the database.yml file used by GitLab CI.
+
+test:
+  adapter: postgresql
+  host: postgres
+  database: smart_parking_api_test
+  username: smart_parking_user
+  password: smart_parking_pass
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  encoding: unicode

@@ -17,6 +17,13 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+
+  # Make sure the connection is evaluated as "network" connection rather than
+  # Unix socket connection. Rules are in pg_hba.conf.
+  host: 127.0.0.1
+
+  username: smart_parking_user
+  password: smart_parking_pass
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
