@@ -1,0 +1,20 @@
+AllCops:
+  # Cop names are not displayed in offense messages by default. Change behavior
+  # by overriding DisplayCopNames, or by giving the -D/--display-cop-names
+  # option.
+  DisplayCopNames: true
+  # Style guide URLs are not displayed in offense messages by default. Change
+  # behavior by overriding DisplayStyleGuide, or by giving the
+  # -S/--display-style-guide option.
+  DisplayStyleGuide: false
+  # Exclude some default Rails files
+  Exclude:
+    - 'Rakefile'
+    - 'config/puma.rb'
+    - 'config/initializers/backtrace_silencers.rb'
+    - 'config/initializers/wrap_parameters.rb'
+    - 'config/initializers/cors.rb'
+
+# Document classes and non-namespace modules.
+Style/Documentation:
+  Enabled: false
