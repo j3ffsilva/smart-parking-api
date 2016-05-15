@@ -44,6 +44,9 @@ group :development do
 
   gem 'overcommit'
 
+  # Code metric tool for Rails projects
+  gem 'rails_best_practices'
+
   # Line-profiler for ruby
   gem 'rblineprof', platform: :mri, require: false
 
