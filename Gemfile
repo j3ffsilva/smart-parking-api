@@ -23,13 +23,14 @@ gem 'puma', '~> 3.0'
 # gem 'rack-cors'
 
 group :development, :test do
-  gem 'byebug',             platform: :mri
+  gem 'byebug',                     platform: :mri
   gem 'factory_girl_rails'
-  gem 'flay',               require: false
-  gem 'flog',               require: false
+  gem 'flay',                       require: false
+  gem 'flog',                       require: false
   gem 'rspec-rails'
-  gem 'rubocop',            require: false
-  gem 'simplecov',          require: false
+  gem 'rspec-collection_matchers'
+  gem 'rubocop',                    require: false
+  gem 'simplecov',                  require: false
 end
 
 group :development do
@@ -41,7 +42,6 @@ group :development do
   gem 'bullet', require: false
 
   gem 'listen'
-
   gem 'overcommit'
 
   # Code metric tool for Rails projects
