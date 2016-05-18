@@ -149,6 +149,8 @@ GEM
     rblineprof (0.3.6)
       debugger-ruby_core_source (~> 1.3)
     require_all (1.3.3)
+    rspec-collection_matchers (1.1.2)
+      rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -220,6 +222,7 @@ DEPENDENCIES
   rails (>= 5.0.0.rc1, < 5.1)
   rails_best_practices
   rblineprof
+  rspec-collection_matchers
   rspec-rails
   rubocop
   simplecov
@@ -227,4 +230,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.2
+   1.12.3

@@ -14,7 +14,15 @@ AllCops:
     - 'config/initializers/backtrace_silencers.rb'
     - 'config/initializers/wrap_parameters.rb'
     - 'config/initializers/cors.rb'
+    - 'db/schema.rb'
+
+Lint/AmbiguousOperator:
+  Enabled: false
 
 # Document classes and non-namespace modules.
 Style/Documentation:
   Enabled: false
+
+Style/EmptyLineBetweenDefs:
+  Enabled: false
+
