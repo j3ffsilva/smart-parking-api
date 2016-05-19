@@ -27,7 +27,16 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'flay',                       require: false
   gem 'flog',                       require: false
-  gem 'rspec-rails'
+
+  # Use the most recent RSpec gems, since they work better with Rails 5.
+  ['rspec-core',
+   'rspec-expectations',
+   'rspec-mocks',
+   'rspec-rails',
+   'rspec-support'].each do |lib|
+    gem lib, github: "rspec/#{lib}", branch: 'master'
+  end
+
   gem 'rspec-collection_matchers'
   gem 'rubocop',                    require: false
   gem 'simplecov',                  require: false
