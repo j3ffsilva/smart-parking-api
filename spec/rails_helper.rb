@@ -1,3 +1,10 @@
+# DO NOT MOVE THIS CHUNK!
+# The SimpleCov.start *must* be issued before any of your application code
+# is required.
+require 'simplecov'
+SimpleCov.minimum_coverage 80
+SimpleCov.start 'rails'
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
