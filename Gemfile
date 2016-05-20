@@ -25,6 +25,7 @@ gem 'puma', '~> 3.0'
 group :development, :test do
   gem 'byebug',                     platform: :mri
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'flay',                       require: false
   gem 'flog',                       require: false
 

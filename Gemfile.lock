@@ -113,6 +113,8 @@ GEM
     factory_girl_rails (4.7.0)
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
+    faker (1.6.3)
+      i18n (~> 0.5)
     ffi (1.9.10)
     flay (2.8.0)
       erubis (~> 2.7.0)
@@ -128,10 +130,9 @@ GEM
     i18n (0.7.0)
     iniparse (1.4.2)
     json (1.8.3)
-    listen (3.1.5)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-      ruby_dep (~> 1.2)
+    listen (3.0.7)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9.7)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -209,7 +210,6 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
-    ruby_dep (1.3.1)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
     sexp_processor (4.7.0)
@@ -249,6 +249,7 @@ DEPENDENCIES
   bullet
   byebug
   factory_girl_rails
+  faker
   flay
   flog
   listen

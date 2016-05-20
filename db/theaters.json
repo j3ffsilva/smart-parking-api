@@ -1,0 +1,508 @@
+{
+   "html_attributions" : [],
+   "next_page_token" : "CoQC-wAAAJ7zoLk_sDbvy4l5Zq2iGfizQAb6WrSyDMtGYBIYBQLFibZWG9H7vNslsTWDVV01PvIUc_xgP5OeJLrtILlDN4tlrSR4HctLmOG047mv5eq0_eLwaFsNhyJVGLgS2x0dvwHPKfx2kUCEYvB4RY5V4ktdDW9e3T2o5LvRAsVMIg_hJEGmUqL6QAhqdonRJjyhjiUbW9oMRtHOgLgyTf7s-gMMCqhJ-dbaDeCKvha6H-2eIAEJoQyIFZoDc4oIyiYPEpKDqS7gKyzIM9jxVwuRwqehfSjNN-jYFl6sdDixQpj2oseRG2A2z2aG_iyqvVIgTmAhhmRmDgPhi6jp2yTWYZESEMxRPhXY15bBNarRSvasDREaFBG9AlXidCOkSHeCY6uBjlDMG5xW",
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5505199,
+               "lng" : -46.6333094
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -23.3566039,
+                  "lng" : -46.3650844
+               },
+               "southwest" : {
+                  "lat" : -24.0082209,
+                  "lng" : -46.825514
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "fedb05012f42e79f038a58eac44e1bbc61b7c7aa",
+         "name" : "São Paulo",
+         "place_id" : "ChIJ0WGkg4FEzpQRrlsz_whLqZs",
+         "reference" : "CqQBkgAAAHmKyZxGcer4U4OJ93Dh3UsE6uJJOKdpzyMX--CC0UsiWt7aRrvRkVCeXXU9CSuRUqsh8OLEwX_w_wEkCanXMaUXPRUPDn63TDIVoIzVl2BeY9rhpqiwWAyieLVDso9ACwyJceMldjboPY8oOLxZ1BWeYmymGRQvn63dYo8ZBBMxWB7nFXUtNiQC6YPNI1uhHGN3cpm61a0waXfO__BnDRsSEON8s5CTvOtE3dV_EfPXJwoaFBJczF9XshIrZww7jyGt9LN-2jax",
+         "scope" : "GOOGLE",
+         "types" : [ "locality", "political" ],
+         "vicinity" : "São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.542793,
+               "lng" : -46.6392359
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "2ecc01fd03aa48056aa417899b35cc44b923781c",
+         "name" : "Hotel Cinelândia",
+         "photos" : [
+            {
+               "height" : 1176,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103003995574236144086/photos\"\u003eHotel Cinelândia\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAALPjN5m7xWBmLCTvOex7MwcjrkaGrpbt7AstCNQUsIZqOv_4mMZP_Y5bCGYQB3MTONYue8Td3B6zKTgr74eUuF5YgMd2_BkixycTxj-UR7aLXo8ccQff_P9whmKU0rY4uaR8WD-xMN9ewMEeZOfrjuL3c1zf9aNygg7mA6lGPOpjEhCRYUcM-RV0w4QXU47yP3qCGhQa4hm7q_iIv2Bz4h6UCVwLNUIibA",
+               "width" : 1764
+            }
+         ],
+         "place_id" : "ChIJL3X1BVFYzpQRUbqb77lGQIo",
+         "rating" : 4,
+         "reference" : "CnRlAAAA4H4IPz4jwVeEFNYdlg6dr1L4hsYerXyjxjCjuHoc3PfeVY0KQeDYCcjgKxLHpeHtDrlpOLK5wNlH38PtnvvOvbFxhWwg1CIdONzSwe2_c4NbEXQnZFS6EnILLARMJw1NRVblvm8L9yx0u4iROA2BNBIQrMQlQczVSuZVCESiemuaABoUrNx0P7r49P5Tv6gezIW9QQRLC6M",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Avenida São João, 536 - República, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5390243,
+               "lng" : -46.6449049
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "fd3e4cb134930f7b83ffc74b77310a10ffa6b458",
+         "name" : "Terra Nobre Plaza Hotel",
+         "place_id" : "ChIJB-JjRkRYzpQR0Cej-pydG6c",
+         "rating" : 3.9,
+         "reference" : "CnRrAAAAaeaDWRUFrEa9R2iY5KTLLDu1_t1rxD27AX6hL-mRZ4EbFrQQNJ9nfUMUAN6HGeIXCEXI3-csku0aRM3jZJCuEhs466LijgSK-N7zOG9ABxsahobaZdmNzhxnj2oCmWpXQ4923Sg5SZWOMozmW_GQsRIQoj0P8eSrqqB0zKE4_bGVGRoUCtx7RsK6IYu-3zb5e1miKeZMI_s",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Barão de Campinas, 146 - Campos Elíseos, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.54016399999999,
+               "lng" : -46.644834
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "677618f13e17947109c6feb08900f46eb84f5ed0",
+         "name" : "Hotel San Raphael",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 3036,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110736184466729265302/photos\"\u003eHotel San Raphael\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAALoQqkwQQNyjNHBaJjRbhkJcQLR1FsDDKhgnLLX1G1cpwzx6W9PEl0nUywn1tBqqxEmWCTv8v3qFql8BO0NwCDNtUDWpojObbRB4afkVvVWAGt5NG_IVXQpMMg0ehS3QrTRl5Qcy5TnDVkNOCuKXuzghYLJs45nPP054bVIwvX96EhBRAEV91LT4T3tNFOChDm9vGhRliXYcwsUbmVR-9cxGtMPTeUKEpg",
+               "width" : 5437
+            }
+         ],
+         "place_id" : "ChIJSZk-60VYzpQRjZZJPr2I9Mk",
+         "rating" : 4.1,
+         "reference" : "CnRlAAAA-Oewq6P-o1Po5mbcoVI6b8O3IiI985Rp_TANvKwg4irzGj1MpV_9KpGBGWMbsHskyMhNCdsXgzcViVdWP7WZ2PUINdzdRhul6cFERK7-iAelM_EMUFevJpWuNYTT9MWgjJkQdvRNeHicVYG612N81hIQZnNnWhnkYukd9GlD9I-AqxoUrAv5TDvvI9vhI-ymuwa9ss_yVW0",
+         "scope" : "GOOGLE",
+         "types" : [
+            "bar",
+            "restaurant",
+            "food",
+            "lodging",
+            "point_of_interest",
+            "establishment"
+         ],
+         "vicinity" : "Largo do Arouche, 150 - Centro, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.53984,
+               "lng" : -46.64517300000001
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "f921b1bb1fcc95ea4874ec452f85d53ccf3dde7e",
+         "name" : "San Michel Hotel",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 537,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111904230351418166225/photos\"\u003eGregorio Jafet\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAAO-LXFaLLVc2AF4xcLrO4-6oJHAsPmA4lGDgzJ9B0lznh0NjhJgLpiScf_BYTPffOVh3my4aW4D5XHTjf6Rtk1Wq055LoPyfmEzrEJXNjfQ8AltxnNwDVcm1fEpWU6G4olo7txNM_nNsaEKPiWMjPKr8a1ZEZCy9YxR1KYrdXk4tEhB3fj-jc1nrkb2RiVzOtrReGhR6h97hhpKNDo3X8u9k9WqXu-adRg",
+               "width" : 576
+            }
+         ],
+         "place_id" : "ChIJX1yx60VYzpQRywSf2WcRTEI",
+         "rating" : 3.6,
+         "reference" : "CnRjAAAA_P7ZUK6WByVW42WgXe0gOObqOlp7aoE9UsUC1aL6YTjVpw4Sm3RnMUPTMVkV0EqeP7BoP8ub-ONorJTKa-QC6eI-rMP9_jB4aNekhQA2aVjy2j1PqU93Ib51OM7RDVaUkBQIvWs5813U_7bkO2GxTBIQaVh2z_uDlTIuuoVR00oNwhoUrcMPQyS1b0dmzr7lx6sT11ORJhc",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Largo do Arouche, 200 - Centro, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5452725,
+               "lng" : -46.64246139999999
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "cf1c71d3f09e22327561264bba1c73627e7bb309",
+         "name" : "Hotel Gran Corona",
+         "place_id" : "ChIJD-HpFU5YzpQROa2DXvhTLP8",
+         "rating" : 3.8,
+         "reference" : "CnRlAAAAQlNaduBuzCi12CwalftB5biV83RV6epN3NgGmWbbvZj_ot7HE1Xd37_AR4HvY3HXR38fRpPT24XDut-qW1Wrfs-gu-TfRSVnuV-9goenUL2nAaXTNfH4m1skRbvVAnNyADNtdbIE1r1omBHptUtCvRIQsqqmO47CCWO4zOSfo9u0PRoU3mWG_oVhRQrei5hcSqvrbMkXbrs",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Basílio da Gama, 101 - Centro, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5495686,
+               "lng" : -46.6454432
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "c536ae55df67fd4468fdd46b2f92843413cfc1b9",
+         "name" : "Braston Hotel São Paulo",
+         "photos" : [
+            {
+               "height" : 1515,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112625739567861527962/photos\"\u003ecaroline pereira\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAAHVWupHwMPvaMqf97H_z4d8sqByvIvIwFkdJL5p2BtviakJFW_fLqYvNHgAhDahVJ5avrC_hfcTkavn_kSIdQ6tp3z2kfn-Pbtw_pOzWBP8lHZjyRfbONUakJqnoE06Pk3ltNbw3nXmXchvETrlyLAfhHiaUoW714ytCP-gBVeIaEhAgHW_68Zbwje6csKIl9Wn7GhQz_9tndj8tGG8g9gCumKzlQlrToA",
+               "width" : 1242
+            }
+         ],
+         "place_id" : "ChIJhU8nikxYzpQRu0GrE4aBKk4",
+         "rating" : 3.8,
+         "reference" : "CnRrAAAAqqUZp6-hDUVWE0AFwu6YmxhA0FSrnJPB8MecRV1tSdQ4k_rTAT90WOHnRjFiWGT6hwnY4nXH2QYr7oA2dd6ReQRU8Is0jBhwpiwbWiD-mENy5_GiGMEarEY9wUT8WtqLCKT1VToZOe7X12A0v8OFoBIQytG3T4M1P05wGFVjULb8_BoUn-jlv7pWan3jJanB_sHiLqsTkmw",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Martins Fontes, 330 - Consolação, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5356425,
+               "lng" : -46.6541625
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "667db6f74ed2425e61460ea87be998c4e83a8df4",
+         "name" : "Higienopolis Hotel & Suítes",
+         "photos" : [
+            {
+               "height" : 1365,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114118675106618967856/photos\"\u003eAmarilio Dantas\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAAEFowvMK-un6DW3Cr8C_dD2Qo-C281F_-gSdfF8DwnkuDXbtAILhATsvB5qjZheUQyzsdPTiAYEjzJaBJo6tSbFjjQpiqevMKNw0KaUn7vyV-_bzVGZYLhxhVpnS4jENvejKf9dcfXp-B4w5UJ4KRmQmu-jmNAj81-M3Gk2m8A4tEhAsOJjND1qxjbOiETAlKZ98GhS8SrA07bi4OJzL-a7R-l0Px3h0Rg",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJ6boJhhVYzpQR6rXvwUwxMVw",
+         "rating" : 3.8,
+         "reference" : "CnRvAAAAIsh2kLNVP5qWU3STmxyhBZqEDP5tpDiVuh9qEeOJMs-0kH74NkZklJImMkvqDg54cVDMrn97K_cPjtwj57D8B6h9ovXpBTycGIr8nUYnGqodK7RFEtSWBMTLryK41piFfHSjXKlon2x_LOP996BjuxIQzLLNujQcaachMkJPbJc9xBoUeP4MoMdOueekZouTPTFdbMNNObk",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Avenida Angélica, 310 - Higienópolis, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5517868,
+               "lng" : -46.6521531
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "142ad606e3e7049c85448b91b0496a7a424dae45",
+         "name" : "Hotel Moncloa",
+         "photos" : [
+            {
+               "height" : 600,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106731576462966217513/photos\"\u003eAna Lobato\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAANPyCTDVrLuXh8sxpSp3C4nSa7iu3vAT_6boFnO3IHm8jOLZkLKGFXjCKz6S51oji_KjEd3VXKzQV61DwKdXKkCXJoAkvNaA5R4cVeamFU1QPt_BT_IRyhK7GSUbvnrlzLTJjyDtY9AzA6mgYgWU0D3O8COpwV8UjtnXRuAx3iI8EhBkqYFzt9ui8OeYVwFnL1olGhRZ7AI0YRksR4ULsS_bgYcVdo_XCg",
+               "width" : 800
+            }
+         ],
+         "place_id" : "ChIJEeznnTVYzpQRoqr8bV5NdAs",
+         "rating" : 3.8,
+         "reference" : "CmRgAAAAmNR4n9K9TCITMOmPc1BfxFDdfFLszV3AQbdKahg7Wq0WyUznB43-YFXcNQD8aIFo9gO9wUUz9uaX3z7e4sGmsIFVcfkE_gP2fZddXGllMM9m0m-ttoOW5WDywIa5ICnIEhA2NxTxfZvG_yBKpRgt75byGhRJ2Z77fhZ5giokPo-SzRPQ6ZkbvA",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Augusta, 646, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5520326,
+               "lng" : -46.65331870000001
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "2df7dd570893f95c1b5acdde5d5f8ff114436e0b",
+         "name" : "Hotel Pan Americano",
+         "place_id" : "ChIJue9LBzVYzpQRo2y4J1YKpNk",
+         "rating" : 3.4,
+         "reference" : "CnRnAAAA6kfVihJ6412HrDswBd9loAJcbYf9Rmx1Qzvq-JgF2Mp1nLtFY3qoVNwde0P8xhvdz5AwEA5acbyz7xyGYitRzO-IgMnlgkRWoZupfRYkkovfX4rsictQjkAIMjn_4R5ygQIEhlMB3zb0s5e6isr84hIQw6Z5LeZDaduZVUQq-lCeRhoUB5VGq6ls2EMiRcSOLmMzmHPRM2Q",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Augusta, 778 - Consolação, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5529453,
+               "lng" : -46.6537666
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "29c2c3cdcfa8dbb9624e305e63f4c5d6299edb47",
+         "name" : "Hotel Augusta Boulevard",
+         "place_id" : "ChIJjTOd_jRYzpQRCfO4UK084Nw",
+         "rating" : 3.8,
+         "reference" : "CnRrAAAADIoJaWhu_20brfVGDbuT7TlSuo6masMruvafyWpfr4Se2ruX6BTaCbUvO6NpjhdHoJrKh6KJEXBPjNYzIjXSFy-qf_y0138TpRC4neGQS3rYRsfvyDCsNW-tI9PCLlJQSldgLob7aOVFqaVl5KwaNRIQeIb33ox3G5sShohNcU5xuhoUiebUHkWLS-6SaAv8il7vuqrTbyY",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Augusta, 843 - Consolação, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5581779,
+               "lng" : -46.64943230000001
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "139706a1589fb167f6300aa088292e8be340de41",
+         "name" : "H3 Hotel - Paulista",
+         "photos" : [
+            {
+               "height" : 683,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115889239723700090182/photos\"\u003eH3 Hotel - Paulista\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAAKn7mb5-A28mgrZXiQScyJrfb2Mr9oI8cUPyaah5XAmdxQs2n8RP_-vOaqQo5tWd8xh7Nkjq-VHhg1ZuPfk6peYHolYgpK-3oJwR1eFBmN1EWhj961IO0CrMsSd43bs3_FVl6cURBeHctXWOwcFJ30p4vvCBnPg9pHFucn81vBMUEhCYVG4MZ9Et7VQPn78lAl38GhSLzWMI67XDfdnpFzPc4ngKcSl5Qw",
+               "width" : 1024
+            }
+         ],
+         "place_id" : "ChIJk_eW2LVZzpQRxB1cfZtdy98",
+         "rating" : 4.2,
+         "reference" : "CnRnAAAAuyfGKXieE05zjtp-dM1esvKKJSJ6wWd8t_gf4pE-pyPO87HQfXkUrRu4Hme0-TPUTbQW0Z7sCeIT31HxVdjN6Uq68u-nZ2pxcFSqcqGQx0Mt9jX2MOOWsjSqZHdQ5DLBdfBNxsITjgWO5buWAh2fdRIQtMmzlBGfCGPkZHvPf0kuAxoU9050jdZ1HvkpoqEYrzo2HepU9_E",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Rocha, 217 - Bela Vista, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5529253,
+               "lng" : -46.6545756
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "7a365241fdfacfc11a98471405508b6dfc05672e",
+         "name" : "Augusta Park Hotel",
+         "place_id" : "ChIJ9ypK9DRYzpQRuLELNKz68O0",
+         "rating" : 3.6,
+         "reference" : "CnRmAAAAB6XsjPb4YMEBm8mSi8_gBc7Gi3lFmOZgBWpaEMSLNXTw9r5ybZRhrewmhLVozm-cyeybe-488Trc3Nof2s8Xzwa3uOedovoUkARN3HWobW8BiCQl5u-qJl7ISQctdOPJcw_B0OrAPtCk1IyeOvLuRBIQCe9SGXjsNKMiOi06zdQTNBoUZ5C0vSRIR_F_B-zDH5vWFTbjBhI",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Augusta, 922 - Consolação, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5441204,
+               "lng" : -46.6404375
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "0d942d7862ddf40146937338e05d7233c2f26ef2",
+         "name" : "Hotel Joamar - Rede Buenas Hotéis - São Paulo - SP",
+         "photos" : [
+            {
+               "height" : 1313,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103593444834976043430/photos\"\u003eHotel Joamar - Rede Buenas Hotéis - São Paulo - SP\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAACdkSR2C9zWjGnupH5cdi3Gy6vazGPQwT3Wn9Dbdeh3PhM50sye-lKJtFg6Z7vZsAcMSTZfNqhNwxLl1bKSXVwTmgZ51SIhKZ9H__5J_KN5pxYzM3BySocealDKo6_nMVXzrgZkCKN4crH0CtiJmUJOuhkCKhN33j-bjjntc8ghQEhB5JtX5GtFJoRzbWWln6-65GhTaVMjFLLytGLzLFsf9_SE-2UewUw",
+               "width" : 1313
+            }
+         ],
+         "place_id" : "ChIJIXYlpVFYzpQRcmVC1dsK6kg",
+         "rating" : 3.8,
+         "reference" : "CpQBiAAAANm6gDJZtMw29Ihq7J6H0TSl7Yyth6BuxcW-E2fkKRtBXTaJntbr6_SfQHvABvG2bjKOBe-ieqrEEB3cuLVnCja90AtAZ2lEasXD5IDfafZ9O3mOKu-8ysUuvZwU_Jl859PJFZV_Vd0TDZomKSuD3s947O4eWKtoVpMk6PEAz3Al6anywsyHHeHuEPAwg3jSahIQOCaU8s9-Ol7Knyl7TRudqBoUMMHb-bPPcM1tfbL7vvzTJhWUKeY",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Dom José de Barros, 187 - República, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.564666,
+               "lng" : -46.64119059999999
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "45963c0e9b83ea4f2469b14b4ed60d5255e03410",
+         "name" : "Mercure Sao Paulo Central Towers Hotel",
+         "photos" : [
+            {
+               "height" : 768,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105524254175061352050/photos\"\u003eMercure Sao Paulo Central Towers Hotel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAAL37AYeWDBS2iat2aN0XWbj1BYAKiQdQC_XPjF7HF3wQntUe44U8fhLW1ZnNcJU8sulBHRjEBvEA1mGp5--AEU8fZ8wdEUcAkk68l2WB2PYdEebB-H5VIMq4blLp_-sex8Zgd3m3jlCSPcvoU-MtlwBeknPLMm_KP6O4ELaPawcREhDFm1bZCP3uodYeYqqwlfsaGhTHrwYO9HIaLKrBwe3LJNcKKojqww",
+               "width" : 1024
+            }
+         ],
+         "place_id" : "ChIJZcz-26RZzpQRL0OfhKiQJrU",
+         "rating" : 4.1,
+         "reference" : "CoQBegAAACca6duu_LsQ3I6Q_9xDN_-a5A1L2XNg5SPdlEdefxgvQH3NMtV6FjHFL27DqR9KDVpp1PS0i58fOaca5c2QQ41M0q8aCMdPx1-p23j2d-UrusqSky6ELFM6SlA6_eyVf3aKpa17N0agE7RU2Su0OvZrXaRv2GpGqWkfULjHTTc8EhBF9mtMhKCCXcqYy5TqamIMGhTTX6j8JpMX7gqGK59x-fhu1fpk1A",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Maestro Cardim, 407 - Paraíso, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5537233,
+               "lng" : -46.6572401
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "27ed177927a99cf9fccac2ecef468bc8aa90443b",
+         "name" : "Quality Suites Long Stay Bela Cintra",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 1562,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110613101553292994802/photos\"\u003eQuality Suites Long Stay Bela Cintra\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAALexJIXtc8YUBwSnAF_V6jsIi9Sdv47EZENJHf7i_j3P_EOudRpIOwS6DpilNPoKlZY5Z5kFQn0aUdIFM-Pbt0hWUbU-FtlScq39t_D34MMRZ_n9pjIJr4XAZGN7ef0SNZqsAHmSXgoK3diE0toAdy7ANoa9j92a-cUvQBJutLdjEhAOKu-CYHVUWHxNrFB5FPchGhRv16ZAz9Z-UnFdzyV69a7NYXHQhg",
+               "width" : 1558
+            }
+         ],
+         "place_id" : "ChIJvew9uzNYzpQRoMdp9jmZrsU",
+         "rating" : 4.1,
+         "reference" : "CoQBeAAAAIyRTJ8rZX3ZPAeJ_w3g4QwkCMyZoxZ9iR7NBFRtQf9071UZh9Dy78-inJAE1LnvwqDCx-Ey39vtUQtQbhxPo94tdeSSZxmbRgubMAWD-Y4fL-YjI9H3KC_n5MsWOZsXhxNEI1r3xA-BygVHoPkgLwsJFYs-CP6ZjfarT5pXmr3dEhBfGKR83xe3uPK6Y2ULFS1uGhR3sGAqzAUFLwZBEmEIN0eu-MSC1Q",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Bela Cintra, 521 - Bela Vista, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.54263749999999,
+               "lng" : -46.6409782
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "0ce046c5aee014acdddc4a7c91ea0edcc6d55116",
+         "name" : "Marabá Hotel",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "place_id" : "ChIJVRJFJVBYzpQRSWiFknUHqs8",
+         "rating" : 4.3,
+         "reference" : "CnRhAAAAjkUJJHI2aAHtLqXmdlGWE_hDVmCROK-Dc9rp1cPwcbfgRyMnSSAGhsh6DigV6SbULzwmr8h6Q3fS17mJIfR9sS1VLlKdAsdvHPBKT2gmbG05R9tHPiSe3DvhJrlzzEdbGPgA5kLA-c9rPwovlcMMXBIQFj3IpBahYtZPbgO-pBVNzhoUMV5QiJ-4p0YnKWpExGoctdV3mjc",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Avenida Ipiranga, 757 - Centro, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5594062,
+               "lng" : -46.6514073
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "2950ceb7a9a34fad0c40abdae4107c2657aca49d",
+         "name" : "Hotel Intercity The Universe Paulista",
+         "photos" : [
+            {
+               "height" : 1024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116372751913973282796/photos\"\u003eHotel Intercity The Universe Paulista\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAADgbETcCwOAKp08ydrVS1BPFRb4FcxboO8WzWZe2K0FjfwfzIP8HLg2S1E2Yy8dvaV2esomKeZd2ZXMksnnLaFXO4CVMihVLImibeDC5a4XEGsF_glGnA2kw2YtHPgk7oXMCl-Z9L_00tEIkmpV5fcRwQq6eqbBxVAxATAUaTVpnEhA5iH3ydHoFLfErIugP7rZ1GhQjPe-_LNxbR3ivmWe5ExSKoKEyJQ",
+               "width" : 721
+            }
+         ],
+         "place_id" : "ChIJKTxX-8lZzpQR-sEXW74lKRQ",
+         "rating" : 4.1,
+         "reference" : "CoQBeAAAANPt7VI7WvXlQfh-F4RaZO09XRkYbkjUjL6KkRsB9NEzrQOI51RjCzx0BNAFES87WwSwFq4IrH2XYLly5k8q8nWS8-KBNZMqgQv_4g2yMPGZt3V3Lgy30HnnVPAcLhm7kxdhVrH7ammRwEYWbY7u93GF5hhxWj4lYypCL7OVEOiKEhCiMFUxsGD79rANHkFiJb5iGhQ7mGOB-BGOd5UwdpPkMx97V38_8g",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Pamplona, 83 - Bela Vista, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.5166605,
+               "lng" : -46.6388363
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "851f7f8d40dc838bd4733c0c0fb8a2008ffbdbb4",
+         "name" : "Holiday Inn Sao Paulo Parque Anhembi",
+         "photos" : [
+            {
+               "height" : 333,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105289197068447414709/photos\"\u003eHoliday Inn Sao Paulo Parque Anhembi\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBcwAAABuO1pvdAkp6RLPqCbhYGmsh7MITMhW-o6hITzPhbCMhjtTrjJa0T6cH4F97rzGyVjn7KgS2nXBDgVewVIoeCyoBErqSUUTbDMeSVCt1lSF8uuzYJtKu5LknaL3ESLRxvWwUi9MCDZdJFSAn27GjH0a_DKyyJeb7gcpcV3Dmr4jaEhCL2nnTXUi58kV0AyAx5jMzGhTOIt_gyN-w_ajr7n0BbNibTndwsg",
+               "width" : 500
+            }
+         ],
+         "place_id" : "ChIJ199oN3lYzpQRRec8u90a-xg",
+         "rating" : 4.1,
+         "reference" : "CoQBdwAAAGbt5Q0ugfK3tLDe02Oy-IMCZoFPeNdiS1BYfsbCRn-anqpihKcd47NTP7ubrqkSv8f19Bn5huNKaCAZdvGDdIgHPJ6ZUHwjyXXtecOYlCICkpi5W_PFPV5bMRYbvyndhe6o1eQsMotNX33UBC8hM9lzxinbdtTA9_7FEU5XJwEOEhDzzWdl8D2W6j_L40FMkEWKGhScpG36d22ZMne1XXwUP284TqQ2iw",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "vicinity" : "Rua Professor Milton Rodrigues, 100 - Anhembi, São Paulo"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -23.538047,
+               "lng" : -46.6139117
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -23.5239676,
+                  "lng" : -46.5992733
+               },
+               "southwest" : {
+                  "lat" : -23.5547091,
+                  "lng" : -46.6303049
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "872899c87478a02b70e3862671ca662503fc44f8",
+         "name" : "Brás",
+         "place_id" : "ChIJYxPuU-BYzpQRsZ1qtx7nzEA",
+         "reference" : "CpQBjQAAAEhPAAHosKuPRvf6uyLW3X2r_xMjl-Cv-dAuYYBa3QbqO5i8DPHOIUE_XuN7c44cMKtRu0Gx8DJZ5q5bRV2pzTZPYbnazMKQTiPJpe_LdAcecGdG22P2WpxxIz9pBr_w_2-6jIkPBKhJDiGrKa29WRx8dwxN-wANPdMDdcRZmDbhSDEV-FmBOoNxoR-heWsyXRIQfw4G2wyeAlC4k84I7uMwjxoUTyqjJe791K4-avH1z9elarvemCM",
+         "scope" : "GOOGLE",
+         "types" : [ "sublocality_level_1", "sublocality", "political" ],
+         "vicinity" : "Brás"
+      }
+   ],
+   "status" : "OK"
+}
