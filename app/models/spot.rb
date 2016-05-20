@@ -1,4 +1,6 @@
 class Spot < ActiveRecord::Base
+  acts_as_geolocated lat: 'latitude', lng: 'longitude'
+
   # Constants
   PARKING_TYPES = %w(street parking_lot establishment).freeze
   SPOT_STATUSES = { defected: -1, available: 0, occupied: 1 }.freeze
@@ -18,4 +20,9 @@ class Spot < ActiveRecord::Base
                                         less_than_or_equal_to: 90 }
   validates :longitude, numericality: { greater_than_or_equal_to: -180,
                                         less_than_or_equal_to: 180 }
+
+  # Defines which attributes to use in the JSON API representation.
+  def json_api_attrs(_options = {})
+    %w(latitude longitude status)
+  end
 end
