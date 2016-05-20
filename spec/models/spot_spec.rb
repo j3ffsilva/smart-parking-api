@@ -37,4 +37,8 @@ describe Spot do
       expect(spot.errors_on(attr)).to include("can't be blank")
     end
   end
+
+  it 'has attributes that are used for its JSON API representation' do
+    expect(build(:spot).json_api_attrs).to eq(%w(latitude longitude status))
+  end
 end

@@ -11,10 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160514042143) do
+ActiveRecord::Schema.define(version: 20160520210856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "cube"
+  enable_extension "earthdistance"
 
   create_table "availability_schedules", force: :cascade do |t|
     t.integer  "spot_id",      null: false
@@ -56,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160514042143) do
     t.decimal  "longitude",        precision: 15, scale: 12, null: false
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
+    t.index "ll_to_earth((latitude)::double precision, (longitude)::double precision)", name: "spots_earthdistance_ix", using: :gist
     t.index ["establishment_id"], name: "index_spots_on_establishment_id", using: :btree
   end
 

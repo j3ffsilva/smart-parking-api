@@ -19,10 +19,12 @@ AllCops:
 Lint/AmbiguousOperator:
   Enabled: false
 
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 # Document classes and non-namespace modules.
 Style/Documentation:
   Enabled: false
 
 Style/EmptyLineBetweenDefs:
   Enabled: false
-

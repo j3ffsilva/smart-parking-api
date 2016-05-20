@@ -23,6 +23,9 @@ module SmartParkingApi
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    # Make Rails look for files in the lib directory
+    config.autoload_paths << "#{Rails.root}/lib"
+
     # Make time columns be time zone aware.
     # This will be the default in Rails 5.1.
     # See https://github.com/rails/rails/pull/15726.

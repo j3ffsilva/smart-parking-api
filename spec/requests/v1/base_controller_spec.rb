@@ -1,4 +1,4 @@
-RSpec.describe ApplicationController, type: :controller do
+RSpec.describe V1::BaseController, type: :controller do
   it 'loads' do
     # ApplicationController is a Rails-generated class that we haven't
     # modified, so there is nothing to test.

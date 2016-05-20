@@ -80,6 +80,10 @@ GEM
       activemodel (= 5.0.0.rc1)
       activesupport (= 5.0.0.rc1)
       arel (~> 7.0)
+    activerecord-postgres-earthdistance (0.4.3)
+      pg
+      rails (>= 3.1)
+      rake
     activesupport (5.0.0.rc1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
@@ -129,6 +133,11 @@ GEM
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     iniparse (1.4.2)
+    jbuilder (2.4.1)
+      activesupport (>= 3.0.0, < 5.1)
+      multi_json (~> 1.2)
+    jbuilder-json_api (1.0.0)
+      jbuilder (~> 2)
     json (1.8.3)
     listen (3.0.7)
       rb-fsevent (>= 0.9.3)
@@ -143,6 +152,7 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.9.0)
+    multi_json (1.12.1)
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
@@ -231,6 +241,10 @@ GEM
       thread_safe (~> 0.1)
     unicode-display_width (1.0.5)
     uniform_notifier (1.9.0)
+    versionist (1.5.0)
+      activesupport (>= 3)
+      railties (>= 3)
+      yard (~> 0.7)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -239,11 +253,13 @@ GEM
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    yard (0.8.7.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgres-earthdistance
   better_errors (~> 1.0.1)
   binding_of_caller (~> 0.7.2)
   bullet
@@ -252,6 +268,8 @@ DEPENDENCIES
   faker
   flay
   flog
+  jbuilder (~> 2.0)
+  jbuilder-json_api
   listen
   overcommit
   pg (~> 0.18)
@@ -268,6 +286,7 @@ DEPENDENCIES
   rubocop
   simplecov
   tzinfo-data
+  versionist
   web-console (~> 2.0)
 
 BUNDLED WITH
