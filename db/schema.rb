@@ -59,4 +59,7 @@ ActiveRecord::Schema.define(version: 20160514042143) do
     t.index ["establishment_id"], name: "index_spots_on_establishment_id", using: :btree
   end
 
+  add_foreign_key "availability_schedules", "spots"
+  add_foreign_key "pricing_schedules", "spots"
+  add_foreign_key "spots", "establishments"
 end
