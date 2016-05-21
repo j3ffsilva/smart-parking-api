@@ -1,19 +1,33 @@
 # Smart Parking API
 
-## Setup
+## Description
 
-This section covers steps necessary to get the application running locally.
-It assumes you're using **Ubuntu**. You may need to adapt some commands if this
-is not true.
+This repository contains the Rails application that provides a RESTful API for
+gathering data regarding parking spots of the city.
+
+The API can be consumed by any client, such as a single page application or a
+native mobile application for iOS or Android.
+
+One such client is the
+[Smart Parking Maps](https://gitlab.com/smart-city-platform/smart_parking_maps)
+application, so be sure to check that one too!
+
+## Development setup
+
+This section covers the necessary steps to get the application running on a
+local development machine. It assumes you're using **Ubuntu**, so you may need
+to adapt some of the commands if this is not true.
 
 ### Dependencies
 
 - Ruby 2.3.1
 - PostgreSQL
 
-### PostgreSQL setup
+### Dependencies installation and setup
 
-#### Basic installation
+#### PostgreSQL
+
+##### Installation
 
 ```bash
 # Install PostgreSQL server and client
@@ -27,7 +41,7 @@ postgres=# CREATE USER smart_parking_user WITH PASSWORD 'smart_parking_pass' CRE
 postgres=# \q
 ```
 
-#### Configuration of the earthdistance module
+##### Configuration of the earthdistance module
 
 We need to install [two contrib modules](http://www.postgresql.org/docs/8.3/static/earthdistance.html) from PostgreSQL, `cube` and
 `earthdistance`, that will allow us to calculate the distance between two
@@ -46,19 +60,63 @@ postgres=# CREATE EXTENSION earthdistance;
 postgres=# UPDATE pg_database SET datistemplate = TRUE WHERE datname = 'template2';
 ```
 
-### Project
+### Project setup
+
+Now that you have all dependencies installed, you can setup the project with
+the following steps:
 
 - Clone the project from GitLab
-- Run the following commands:
+  ```bash
+  # You can also clone using the SSH URL.
+  git clone https://gitlab.com/smart-city-platform/smart_parking_api.git
+  ``` 
 
+- Install Rails and all other gems
+  ```bash
+  bundle install
+  ```
+
+- Setup [overcommit](https://github.com/brigade/overcommit) (Git hooks for code quality)
+  ```bash
+  overcommit --install
+  overcommit --sign
+  ```
+
+- Start the server
+  ```bash
+  bundle exec rails server
+  ```
+  
+- Open http://localhost:3000/spots/search?lat=23&lng=23 in your browser
+
+## Testing
+
+We use RSpec for our test suite. To run all tests, use the following command:
 ```
-bundle install
-overcommit --install
-bundle exec rake db:create db:migrate db:seed
+bundle exec rspec
 ```
 
-## TODO:
+## Project phases
 
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
+### Phase 1 (due May 20)
+
+- **Goals**:
+  - Define our data model: what data do we want to collect and store about each parking spot?
+  - Implement a basic (but easily extendable) API with a search endpoint (`/spots/search`)
+
+- **Issues**: see all issues that were planned (and delivered) for this phase [here](https://gitlab.com/smart-city-platform/smart_parking_api/issues?assignee_id=&author_id=&milestone_title=Phase+1&scope=all&sort=id_desc&state=all&issue_search=&).
+
+## API Documentation
+
+See the detailed
+[API documentation](https://gitlab.com/smart-city-platform/smart_parking_api/wikis/api-docs).
+This documentation will be constantly updated as the project evolves.
+
+## UML diagrams
+
+See the [docs](https://gitlab.com/smart-city-platform/smart_parking_api/tree/master/docs) directory.
+These diagrams will be constantly updated as the project evolves.
+
+## Contributing
+
+See our [contributing guidelines](https://gitlab.com/smart-city-platform/smart_parking_api/wikis/contributing)
