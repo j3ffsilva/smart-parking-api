@@ -117,6 +117,11 @@ This documentation will be constantly updated as the project evolves.
 See the [docs](https://gitlab.com/smart-city-platform/smart_parking_api/tree/master/docs) directory.
 These diagrams will be constantly updated as the project evolves.
 
+## Wiki
+
+See our [wiki](https://gitlab.com/smart-city-platform/smart_parking_api/wikis/home) for more specific contents.
+
 ## Contributing
 
 See our [contributing guidelines](https://gitlab.com/smart-city-platform/smart_parking_api/wikis/contributing)
+
