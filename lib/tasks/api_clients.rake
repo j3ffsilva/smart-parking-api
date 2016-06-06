@@ -7,7 +7,7 @@ namespace :api_clients do
     user = ApiClient.new(name: name)
     if user.save
       puts "Api Client '#{name}' created."
-      puts "Unsecured Token: #{user.token}"
+      puts "Token: #{user.encrypted_token}"
     else
       puts 'Problem creating user account:'
       puts user.errors.full_messages
