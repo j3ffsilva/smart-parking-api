@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::API
   protected
 
+  def authenticate
+    api_key = ApiClient.find_by_encrypted_token(params[:token])
+    head :unauthorized unless api_key
+  end
+
   # Adds a new error object to the request's errors.
   #
   # @param error [Hash] the error object. It must be JSON API-conformant.
