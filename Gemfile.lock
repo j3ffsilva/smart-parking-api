@@ -91,6 +91,7 @@ GEM
       tzinfo (~> 1.1)
     arel (7.0.0)
     ast (2.2.0)
+    bcrypt (3.1.11)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -261,6 +262,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-postgres-earthdistance
+  bcrypt
   better_errors (~> 1.0.1)
   binding_of_caller (~> 0.7.2)
   bullet
