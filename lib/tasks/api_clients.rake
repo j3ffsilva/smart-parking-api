@@ -4,11 +4,10 @@ namespace :api_clients do
   task create: :environment do
     ui = HighLine.new
     name = ui.ask('ApiClient name: ')
-    user = ApiClient.new
-    user.name = name
+    user = ApiClient.new(name: name)
     if user.save
       puts "Api Client '#{name}' created."
-      puts "Token: #{user.encrypted_token}"
+      puts "Unsecured Token: #{user.token}"
     else
       puts 'Problem creating user account:'
       puts user.errors.full_messages
