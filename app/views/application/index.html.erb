@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Parking API</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style type="text/css" media="screen" charset="utf-8">
+    body {
+      font-family: Georgia, sans-serif;
+      line-height: 2rem;
+      font-size: 1.3rem;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
+
+    h1 {
+      font-weight: normal;
+      line-height: 2.8rem;
+      font-size: 2.5rem;
+      letter-spacing: -1px;
+      color: black;
+    }
+
+    p { font-family: monospace; }
+
+    .container {
+      width: 960px;
+      margin: 0 auto 40px;
+      overflow: hidden;
+    }
+
+
+    section {
+      margin: 0 auto 2rem;
+      padding: 1rem 0 0;
+      width: 700px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <section>
+      <p>
+        <a href="https://gitlab.com/smart-city-platform/smart_parking_api">
+          <img alt="Smart Parking logo" border="0" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAFPr3GUAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA9hAAAPYQGoP6dpAAAAB3RJTUUH4AQcER4FjBD90gAAFTlJREFUeNrtXXl4FFW2/93qhLAl6aoiG2sgCZoEEMKgbD5FBmRxgEEER8YRHER9Io4+dNyeEBeYEReEKAOyqDiiwjfM4wkqi8CTMIogUUwihJiAZIPU7SSdvZc7f/SSru7qquolCcy88339fdVV9546dercc88599xTgAJQSo9RSr9Xuka8GjKlRoIguNtxWo1d1xhjXdx3cDUWBAG5R4/KGo8bPx6UUvedIryxpWdkILO0CgCQn5wgu1ZTU5PFUUplKPPy8gAABs6KvLw8/Hb+fPc1u91+EpTS006S3D9iNLKEI1/LzlFKmfs5XR1YLWSNPM9RSpkkSf/lfoaTJ04gMeMO3DIhWUZ3YkYpco9uAwCIovgq8WRdYUEB0jMyZB1c5wghr/I8v8zdgTEWYTKZLErvgTG2VhTFRxRfkiRJma4HpJT+EVpAKR1GKW2RJGmOXzlSEwuXHBGthp4duLq6OtHjBAoLCty/hQsWeJJXT5SwZpZWueVmzpw52Llzp1yUBUFAXl4epp+7iIqsdGSWViEvLw9ffPGFXKa9ZSbp20JFeXFj7tPb42XYbO7j0//wYJ0kSS8QQp4dN2E6hGgDoiIjZfSfO1+FvBNHIWNdY2Mjunfv7sOyc0VFSE1LgyAIJPCX4k8beGoAxcYuqKur62W1Wi9rvVk1yVSlJFAghAznef47XYIqCIImwpycHNx1112BCbYgCMg7lYf+A/prCbxbF/oMBErpUO8LK1euBAA34gWVFJmlVRAEAZnnL7n1ptoTUkoZoZS2AOiixYqkbwvdxxVZ6f4Uhew/xxib7yMBtY5fly7wQeiN2NXWr7R4yWqwwiKj3O8IWvTYKthsdmx85QlEeo1Vb1j4yEsAgK1vPKM+4iilQwCcRvBABUEQNUcopbQOQLQejN7DPlBePk0pLaYOeJcxFqk5WlWQUQB8sBT7nDSZTDMZY38P8KHqBEGIVTOgfgbQN1iWKRpaJpPp61CQeouvXw0YHx8Pq9Ua0CBxwueCIExR1X6HDx1SHSzjxo9Hamoqjh8/7sOSCKUOaWlpAIBh112nSm1KSgrOnTun9BT5nBK1kiSB49zsx6HGFmSWVrl/LtixY4e/e2Zw/q5s3brVfbzkUg3sn36AKi9tl5yc7PdpIvxd6Nevn9vuhTEJtRs2ghG5Pex+okOHMGHCBPkA8WaFkhrttWM3IlPSVCeA7OxsPPzww8qIR4wYgfPnz6vOLP5mFW/Rk/GYSpLfmeLSzFt9EDVVOdoNzfS9iQxxpMf89Ol+eUPbzxd8qOUHOC28fAXEHMeNcv05eOCAgz+xwLQ52kO4udnRFgBGjhypPgcWFhRg9ry7Hebv4GRVxPlnSwEAjyxZgvsW/Q4Gg0E+8hhjdxBCdrh8sdG3zPaZ05Rg6dOvwdzQhF/NmOZGqqqECgsK0K1bNyQPHKiKuLW1FcXnzsl8JH+TKgtFbSrqY48LLFSkPoidDbjW1taeehEyxl5Qmvc0p26TyfQxY+wOr9MNPM/HEELsAc/SOqeiPwH4YxBdTQBmCIJwNChHIEAizwPoj3YAQsg9PM+/FxaiTSbT14yx69GBEBERERcTE1MdjBF3AUA/dCIQQgbyPF+qx+n8FYDdWggPHz6Md955B7W1tUERNGTIEGRnZ8tMDn8DXRAETs34vAigjxqGsWPH4scffwwrRysqKhAVFaXaxmq1RsfHx9fLTBhKqQmAUa3jqlWr3AQ/+8wzmD17NjivuUQvNNTXY9z48Q5jIylJ0dH2knMzpdQoCEKta4ZdB2CJDg0vsyYJUR4SK6rr8Lf6JiRHGvCkEI2x3ZS5+NKLL+LV114DALz//vuYNm2arllGd5ytrKwMQ4c6ggvTp0/Htm3boBRFa7N8bIDHWxA4gi/7x3vZK83o3bu3mtegBHs5SukzelrefPPN7uN1a9eqElyRlY6KUUNQkZUOtvevDoLsvnzp2rUrUlJSApWsaYRSWgpggL8WNpsNCQkJsNvt6uqpW3ck5p50WgYGREglsPfLgL2+3qEC7HZU/iJTk6KlS5dixYoVqm04tTBATk4O4uLiNAkGANbU6OAsY4DdBivf301w7eqVuggGgLVr12pGbzgAe/xdXL16ddvrT2/zBvJy/SOsHNnGXQCoGJmBxu3bFNuKQhvOirP65YPjeX6Riv3mPvzhq7bT1w0BIiL8I636D4cvYd6QI8PhDSUeMaXEBCBNn3ibOUJIKwDFWO6kSZPaZDZW/tMKITRsfx/1G95UbRPTR46zqFibYp7njZxT98UrNXjzrbew6e23g5o86la/FFS/Xr16+ax4eRjuywghdl0+C6UU/7lspezckt/PhsgbQ5q+s1/ZIvt/+203Y86vpytOWoyxF0RRfM6fwaQ4nRcWFKD4QiUsVhsG9o3H0CGZMKgJtg4oLChA6cVLaG61oG9SL2SmX6O4GgJggCAIF1RNU71rFu0NjLEiURQHB+QEmEymAYyx0k6gt1AQhIyQ3S1K6R4A09qZWJkYhNWxlSQphhByDEBmiK9/mSiKr7arY6ty80hK6UxCyAwAw+EIOPcAcBFApXPW/V9BEE6H435BEy1JUiaALwgh8UF03ygIwv0dRrQkSSsIIcvDJMNmq9U6OD4+vrJdiNbr8AYJ5YIg9Akr0XrXhMIwNuaJovhxSESbzeZ4i8VS1cE6+itBEMYERbQkSZmEkB86aTKsEAShd0BES5LUjxByAZ0LfuWcU5CrqCuAYADoTSk9povTlFK7lqzbbDYsX74c+fn5QVETGxuLhQsX4qabbtITz5vN8/wutbCYpn2xc+dOLF68OCysNBgMuHxZ25j0m1Jz+fLlaIPBUKfWubW1FYmJiWGVgcGDB+Orr77SavazIAjuuHiEx1OXa/UcN26c+3jWrFl4fNmyoAi1WCy42bl8efasLje8X11dXS9XzJp4WG21Ol6T+zj36FH06NkzKKLtNht27tyJlatWAQAef/xxPPXUU1rdagVBMLqJppQWArhWL9GpKSk4/s03IYnFhQsXMHz4cEf8QxRRVFSkW7ZdKk+T4D172mI6M2fN8tvuWFMLZpRVY1hpFVZU+x8i/fr185wX9BprrwMAV11drWs9xXMtf/78+YptMkurcF9VDYotNtgA7KhvQmZpFQ41tiipMp91Uh3q7w+AY2n5BT0dPHMak5KSfK7feOGStzJvCzdcqlHEeeutbQvs5eXluonnAEwOVB6VlhrcoVxCUOUM9do//cB9fUGlb+x53ty57uN3331Xr4hkcIESnKoRT2Z734crxlr1TNtL/KbZN6f3xhtvdB9v2bJFr4jMiAhUNEaPHu2TNgIAMDpEJmL6PJBnXwRjQNf+bTnZyVaLcr8AByOcQXXVpYvnnnsOOTk5mpgST+SDOJfXuJ49wV0ogLXXQMDukO3KcSPBmhrVZZXjUFVVpTVAS1TF44033tBFMABZ0NxeXw+r0N9NsKW4SJNgALDb7YiLi9O0/lSJzs7ODkjea1evVHKhUH3HjIDwvPXWW6oOVcADUQ0at2+D3SyfUKomjg0Yz+bNm9Uul+kmurKobalBUHFxq24eLRMTVlPjt+13x9pwZnjMydXV1WrO7yldRF83BEjwCMlcLFR1qdtuPv92FV0PDPMIquV/rYxDYbDu5gA0aBHd7DULt1o0IjAbHIPX9vMFFe8nOBE0Go2fcAA0p/EzRUCBxxp+Ypp6+/oNb8o2HyiB1Qp8frDtfx8P8fBMgVOYXCwcz/Ov6HnCzBvaFnSam3UMyo+3a7aZMrsNZ3lF23nv/EbPoeVpTysK0cSJE3Hq1KkOd8O//fZbxexPQkgWz/PugfiEUuecdesgimKHErx50yZFKxIAeJ4/JXNslbhts9lw9swZHPnya6x/exNaW9rkQitxUQtaLBacKylr80p6JWHTmy8jKioKgxSMMkLICp7ns2WOLYA/AXjS28W/Nj0dP/z4E9KHycNry5fdGxLRkqkGOZv/JjuXkJjod13cRbCMaEEQnqKUPqnkYYwd/QvsPeLeD4OY6O4+m82C8cg3f3yojUEc55dgQsgsv8Eak8mUzBgr8e7U0NCAgh/P4mJFNbp2iURy3/iQibZZrTj9Qz5KLl5CZIQBKf0T/eGU7axQDItJkvQGIWSp9/lzRUWwWByzSkpqKrqo6FK9UFpSgqamJgDAgORkxYVP3fmgekMK7Q2RkZEJ0dHRlzSjps6nSwdAO5NgxtgQJYL9Eu0kXATwYyfRPEAUxXw1b1wtopMO4M8dyWCe56O0Vm11LRR10Br5HkEQbtMb99AEnufPO0fxynYg1tzc3NxDL8G6Oa2gFpcRQlaHSGy+zWYbExcXZw60IwlxhHMmk2kRgJcBxOoItBwghDxpNBpPhnJfgk4ExpihtrZ2OGNsPIBxjLHJeh5er59NCDlmt9tzGWNHRVE8QgixdNazdhijKaWxAO4HsABAeifPtYUAtjLGNoiiWHdVM9q5VvYsgIfgSFe5kqEeQI7Van3JlQt/RTO6pqZmoN1uXw/gVlzd8Bkh5EGlbR+dxmjGWBSl9GVCyMOdrfPbCTbyPP+wM4m44xntNPo+B3AN/j2gmOO4W41GY3GHMNpZjuIIOiAF6woFCuAmQRB+aBdGO/OSj/4bSbAWnLNYLOMTEhJ0pdFxOqV4nTP5+/+Z3AapkZGRlSaT6bWQJdppRXwLjZ1+eiA3NxePPvqoYj2HzoC0tDSsWbMGY8aMCQc6EyFkBM/z5wNmtCRJcwkhH4VKwcmTJzFlyhTYgl3EamcwGAzYt28fRowYEboJp5A5qMpoSumf4WfxJRBYu3at3715UVFRYYkRBwKtra1oaWlRvPb8889jyZIl4bjNS4IgPKvJaErpSwCeDocke25Sc8GgQYOwZfNmzcJN7QUWiwUL770XJSU+ixw4cOAAsrKywhHDyRZFcYVfRlNKn0CYorlz587FAWctE89h+tmnn2LgoEEhleMKMeaCkp9+wpSpU33U2aRJk/DRRx+F5T6MscdFUXzFx+pwphGGhcllZWU+TAaAKVOm4Nr09E5jMuBINr02PV2WBeiC/fv3B5QRqKGvV9fU1GTJGM0YM3Ac90m4HsZfJuDcuXPRo0cPvRKBUosV88olWeEopd/t5RLOtVp109ejRw9Z5qIe2oOU6r2MOQpZulIlngSwKpymk3cyYGpKCvbt2wcjr+1Qft9iwW8qglsB3J4kYFiUtv6vMZkwafJkFBcX+0h8OE1QlwrhnDVznw0X4j179ihmXM6cNQuxRm1zfJe5SZnJNhu4yhJYP/kQ1k8+BFdZopj39JsKil3mJs37xBqNmDVzpqIO37t3b9gYTQhZzhiLJJIkzXGVtAoHzJkzR14tFo6M0RMnTqiWc3PBqPOX0OiV0GaorUTZhAk+RaYIgD6HDsEWK9//0Z0QfDNAe1NkaWkpRo0a5TMpTpw4Ua2mXVD2NefcTxoWKCsr82EyAEydOtVvEpI3tChkDdoK8xQreTEAtoI8XTiUIDExUXFSPHjwYNgmRQCw2+0zCKX0NIAhoSLLz8/H8uXLFRkdCPS4dzFiljzqI7vk8s8w//djaHLuM+jWPx7RL7wGFtcP3gXV6nJeR8OWjSHRMXHiRGRnZyMjxGwh17RDKKUSgKDsLcYYFi1ahF27doXVBOv5wBJEL37ITxjMmbBuV3bpzRvfRP1fcsJKz+23346NGzf6LXykA6p9KhLrhcuXLyMrKwsNDQ1oDzD0649eH+4C1627vuHZ1IjqO3+tmjMc0svv2RMnT57Uk+ivqBE5ABXB9Fy8eHG7MRlwJFlXjRuJ5qNHNNs2Hz2CqnEj243JAFBfX4/77w+6ekA5oZR+CWB8oD0HJiejtk55pT4hHlj6ADB6FNDSAuw/BGzYAjQ2BUdlj7sXIuZR5RhX3esvo2Hb1qDwdu8GPPB7YNIER8nvfxwH1v4FuORnp2xsTAxKSkuDudX/EWcJsRcD7TlgwACYzWYvM8ZRP2qYn+Ie734ALHgwOGZH/+Fx9PydPGG4/r0tMK8JLmPqvQ3A3XcqX8s7DWTd6LttIjo62m9JXg14ikOw9SIUTKgpv/TPZAC45y4gKcgtz+Y1q2Etb0sFt5aXBc3kpET/TAaA4UMdz6LnmXUaDbs5Z92Vz8Ohxz7dDxxWqaH66jqgojJ4/KZHHlQ8DhQqKoE1KnvADhz2LckcAuwVRbGAOCN3oziOOx5I79E33ICzfrZGR0UBv50HjL0eaGl1bLTZvTdogZCB+O6HAADpnjvD4LEBM6cDk28BoroAuV8Df/3YMa8ogc6KAd5eYRbP86fchqG/zHm/wZvt2/HQQw+ho6H7HAeDG3d+2OH3Xr9+PebNmxcIk1/nef4xd/TOI6Ci20u8fOkSvv/+eyy6776gi9teLWA0GrHp7bcxdOhQxMXrLixVIAhCpmdcBh5SHUMIKYXO5JiysjLU1daiuroa69evx+f79jnKaf4LACEEU6dOxQP33w9RFBFrNMoqw2oAtdlsyZ7J3z4+ZV1dnWi1WksB6CrOYbVacfHiRTQ1NuK7H87i75+pVxQPR5nFUEFpX5g3zJoyHtcNGYxu3bqhT9++gaxx1nEcl2w0Gk2eJ32qBsTExEjl5eUJXbt2LYBKtVs3gogId/jT3GxHVPfvwOx2MGZTLJ4f1ysOAh/budLKRSKyS1eFCwAhBnAch0GpqcFsP7vQ2tqakZiY2KCAWkX+AyyQaDabsWfflziQ+x1sNnn13q5RXTBr8vW45aaxnbYC7gKLxYKDh4/hf/YfR3OLPEnUwHH45fjrMH3yjYiOjg4E7eeCIEzx+3I1lQ2ltzmdGs22NpsNPxUX+/1mjp5PWXQUeO4ZVBqlg1JS9NaeYc7EGdVPJ+mK+zHGuphMpiMARut9EKvV6q5JbeC4kCvJtlvwymqFzUknx3GICIzOXJ7nJ+jZGxNQgFWSpL6EkFy006ctriIoI4SMU8u1C4nRHgzPIIR8hk7+6kUnQAUhZKrnlxfbldEepmAvq9W6G8CYf3EGH4uIiJgRExMjBYsgbHtOTCbTDMbYVgS5LHYFQi1jbJEoijvDYlK2B4XOcr1rASRfhbr3ab2fQOp0Riu49Q/CkQZ8pUl7HYD1BoPh5djY2HYtjtAp29WcFYnvBnAPgMQOui0FsBPAtmC/PHbVMVrFXo+glF7Dcdw1jLFrGGODCSFpzrhLNBxbPFwxmHoANQDMAOoZY0WEkDOEkLN2u/2MIAhnCCHWK+XZ/gkdvPhf/HKs5QAAAABJRU5ErkJggg==" />
+        </a>
+      </p>
+
+      <h1>Welcome to the Smart Parking API</h1>
+
+      <p>
+        This API is part of the <a href="https://gitlab.com/groups/smart-city-platform" target="_blank">Smart City Platform project</a>.
+      </p>
+      <p>
+        We recommend that you check out the <a href="https://gitlab.com/smart-city-platform/smart_parking_api/wikis/api-docs" target="_blank">API documentation</a>.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

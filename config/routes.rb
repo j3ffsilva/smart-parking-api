@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # For a discussion on the different trade-offs between API versioning methods
   # see: https://gitlab.com/smart-city-platform/smart_parking_api/wikis/useful-links
 
+  root 'application#index'
+
   v1_params = {
     module: 'V1',
     default: true,
