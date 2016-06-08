@@ -3,13 +3,14 @@ RSpec.describe V1::SpotsController, type: :request do
     { 'Accept' => 'application/vnd.smartcityplatform; version=1' }
   }
 
-  let(:api_client) { APIClient.first }
+  let(:api_client)     { APIClient.first }
+  let(:default_params) { { lat: '0', lng: '0', token: api_client.token } }
 
   describe 'spots search' do
     context 'with correct parameters' do
       it 'succeeds' do
         get '/spots/search',
-            params: { lat: '0', lng: '0', token: api_client.token },
+            params: default_params,
             headers: api_header
 
         expect(response.content_type).to eq('application/json')
@@ -30,7 +31,7 @@ RSpec.describe V1::SpotsController, type: :request do
     context 'with establishment' do
       it 'returns an error if the establishment is invalid' do
         get '/spots/search',
-            params: { lat: '0', lng: '0', google_place_id: 'XYZ' },
+            params: default_params.merge(google_place_id: 'XYZ'),
             headers: api_header
 
         expect(response).to have_http_status(:bad_request)
@@ -40,17 +41,17 @@ RSpec.describe V1::SpotsController, type: :request do
         place_id = Establishment.first.google_place_id
 
         get '/spots/search',
-            params: { lat: '0', lng: '0', google_place_id: place_id },
+            params: default_params.merge(google_place_id: place_id),
             headers: api_header
 
         expect(response).to have_http_status(:success)
       end
     end
 
-    context 'with establishment' do
+    context 'with statuses' do
       it 'returns an error if one of the statuses is invalid' do
         get '/spots/search',
-            params: { lat: '0', lng: '0', statuses: 'ABC' },
+            params: default_params.merge(statuses: 'ABC'),
             headers: api_header
 
         expect(response).to have_http_status(:bad_request)
@@ -58,7 +59,7 @@ RSpec.describe V1::SpotsController, type: :request do
 
       it 'succeeds if the statuses are valid' do
         get '/spots/search',
-            params: { lat: '0', lng: '0', statuses: '0,1' },
+            params: default_params.merge(statuses: '0,1'),
             headers: api_header
 
         expect(response).to have_http_status(:success)
