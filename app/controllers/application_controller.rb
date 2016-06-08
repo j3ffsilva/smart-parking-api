@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::API
   include TokenAuthentication
 
+  skip_before_action :check_token_presence, :authenticate, only: :index
+
   protected
 
   # Adds a new error object to the request's errors.

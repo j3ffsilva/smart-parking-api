@@ -6,4 +6,9 @@ class Establishment < ActiveRecord::Base
 
   # Validations
   validates :google_place_id, presence: true
+
+  # Defines which attributes to include in the JSON API representation.
+  def json_api_attrs(_options = {})
+    %w(google_place_id)
+  end
 end

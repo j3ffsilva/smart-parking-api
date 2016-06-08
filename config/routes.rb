@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # For a discussion on the different trade-offs between API versioning methods
   # see: https://gitlab.com/smart-city-platform/smart_parking_api/wikis/useful-links
 
+  root 'application#index'
+
   v1_params = {
     module: 'V1',
     default: true,
@@ -21,5 +23,10 @@ Rails.application.routes.draw do
   api_version(v1_params) do
     get '/spots/search' => 'spots#search'
     get '/spots/:id'    => 'spots#show', as: :spot
+
+    # We don't implement these routes yet, but we need to define them so that
+    # the JSON API plugin will render associations correctly.
+    get '/establishments', to: redirect('/'), as: :establishments
+    get '/establishments/:id', to: redirect('/'), as: :establishment
   end
 end

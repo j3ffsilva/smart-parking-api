@@ -39,6 +39,7 @@ group :development, :test do
   end
 
   gem 'rspec-collection_matchers'
+  gem 'pry'
   gem 'rubocop',                    require: false
   gem 'simplecov',                  require: false
 end
