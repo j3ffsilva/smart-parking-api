@@ -28,3 +28,6 @@ Style/Documentation:
 
 Style/EmptyLineBetweenDefs:
   Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false

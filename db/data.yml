@@ -1,0 +1,208 @@
+##
+# This file contains sample data representing parking spots around the city.
+#
+# The establishment data was obtained using the following Google Places API
+# request:
+# https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-23.545241799982602,-46.63861848413944&radius=200&key=API_KEY
+
+##
+# YAML aliases
+#
+
+_establishment_teatro_municipal: &_establishment_teatro_municipal
+  google_place_id: "ChIJi6GKOxFWzpQRHk7k7_d5Wyc"
+
+_establishment_galeria_do_rock: &_establishment_galeria_do_rock
+  google_place_id: "ChIJw5v_nFFYzpQRcRm-UHFepWo"
+
+_establishment_shopping_light: &_establishment_shopping_light
+  google_place_id: "ChIJn0Obs1NYzpQR60tacQW_S24"
+
+_pricing_teatro_municipal: &_pricing_teatro_municipal
+  from: 1
+  to: 5
+  begin_time: '18:00:00'
+  end_time: '23:59:59'
+  price: 10
+
+_pricing_zona_azul: &_pricing_zona_azul
+  from: 1
+  to: 5
+  begin_time: '07:00:00'
+  end_time: '19:00:00'
+  price: 5
+
+_pricing_shopping_light: &_pricing_shopping_light
+  from: 0
+  to: 6
+  begin_time: '00:00:00'
+  end_time: '23:59:59'
+  price: 15
+
+_availability_teatro_municipal: &_availability_teatro_municipal
+  from: 1
+  to: 5
+  begin_time: '00:00:00'
+  end_time: '17:59:59'
+  is_available: false
+
+##
+# Actual data definition.
+#
+
+spots:
+
+  # Parking spots close to "Teatro Municipal"
+
+  - parking_type: establishment
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.54560817579755"
+    longitude: "-46.63851723074913"
+    establishment:
+      <<: *_establishment_teatro_municipal
+    pricing_schedules:
+      - <<: *_pricing_teatro_municipal
+    availability_schedules:
+      - <<: *_availability_teatro_municipal
+
+  - parking_type: establishment
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.545443429752037"
+    longitude: "-46.63837373256683"
+    establishment:
+      <<: *_establishment_teatro_municipal
+    pricing_schedules:
+      - <<: *_pricing_teatro_municipal
+    availability_schedules:
+      - <<: *_availability_teatro_municipal
+
+  - parking_type: establishment
+    status: 0
+    is_outdoor: false
+    is_preferential: true
+    latitude: "-23.54529589580475"
+    longitude: "-46.63824900984764"
+    establishment:
+      <<: *_establishment_teatro_municipal
+    pricing_schedules:
+      - <<: *_pricing_teatro_municipal
+        price: 15
+    availability_schedules:
+      - <<: *_availability_teatro_municipal
+
+  - parking_type: street
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.545059841144745"
+    longitude: "-46.63888067007065"
+    establishment: ~
+    pricing_schedules:
+      - <<: *_pricing_zona_azul
+    availability_schedules: []
+
+  - parking_type: street
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.5451385260785"
+    longitude: "-46.63894236087799"
+    establishment: ~
+    pricing_schedules:
+      - <<: *_pricing_zona_azul
+    availability_schedules: []
+
+  - parking_type: street
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.54526638899542"
+    longitude: "-46.639055013656616"
+    establishment: ~
+    pricing_schedules:
+      - <<: *_pricing_zona_azul
+    availability_schedules: []
+
+  # Parking spots close to "Galeria do Rock"
+
+  - parking_type: street
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.544027097024593"
+    longitude: "-46.63990259170532"
+    establishment: ~
+    pricing_schedules: []
+    availability_schedules: []
+
+  - parking_type: street
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.544082422808085"
+    longitude: "-46.6398261487484"
+    establishment: ~
+    pricing_schedules: []
+    availability_schedules: []
+
+  - parking_type: street
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.544120536112064"
+    longitude: "-46.639769822359085"
+    establishment: ~
+    pricing_schedules: []
+    availability_schedules: []
+
+  - parking_type: street
+    status: 0
+    is_outdoor: true
+    is_preferential: false
+    latitude: "-23.544170944013246"
+    longitude: "-46.63971349596977"
+    establishment: ~
+    pricing_schedules: []
+    availability_schedules: []
+
+  # Parking spots close to "Shopping Light"
+
+  - parking_type: establishment
+    status: 0
+    is_outdoor: false
+    is_preferential: false
+    latitude: "-23.54664705468769"
+    longitude: "-46.63919046521187"
+    establishment:
+      <<: *_establishment_shopping_light
+    pricing_schedules:
+      - <<: *_pricing_shopping_light
+    availability_schedules: []
+
+  - parking_type: establishment
+    status: 0
+    is_outdoor: false
+    is_preferential: false
+    latitude: "-23.546593574140488"
+    longitude: "-46.63915492594242"
+    establishment:
+      <<: *_establishment_shopping_light
+    pricing_schedules:
+      - <<: *_pricing_shopping_light
+    availability_schedules: []
+
+  - parking_type: establishment
+    status: 0
+    is_outdoor: false
+    is_preferential: false
+    latitude: "-23.546508128163627"
+    longitude: "-46.639087200164795"
+    establishment:
+      <<: *_establishment_shopping_light
+    pricing_schedules:
+      - <<: *_pricing_shopping_light
+    availability_schedules: []
