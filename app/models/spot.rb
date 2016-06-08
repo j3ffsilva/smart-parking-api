@@ -23,7 +23,7 @@ class Spot < ActiveRecord::Base
 
   # Defines which attributes to include in the JSON API representation.
   def json_api_attrs(_options = {})
-    %w(latitude longitude status parking_type formatted_details)
+    %w(latitude longitude status parking_type formatted_details google_establishment_id)
   end
 
   # Defines which relationships to include in the JSON API representation.
@@ -44,5 +44,9 @@ class Spot < ActiveRecord::Base
       parking_restrictions: parking_restrictions,
       pricing_restrictions: pricing_restrictions
     }
+  end
+
+  def google_establishment_id
+    establishment ? establishment.google_place_id : nil
   end
 end
