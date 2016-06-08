@@ -40,7 +40,8 @@ describe Spot do
 
   describe 'methods for the JSON API gem' do
     it 'has attributes that are used for its JSON API representation' do
-      expect(build(:spot).json_api_attrs).to eq(%w(latitude longitude status))
+      expect(build(:spot).json_api_attrs).to \
+        eq(%w(latitude longitude status parking_type formatted_details))
     end
 
     it 'includes establishments' do
