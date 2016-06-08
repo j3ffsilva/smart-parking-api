@@ -3,11 +3,13 @@ RSpec.describe V1::SpotsController, type: :request do
     { 'Accept' => 'application/vnd.smartcityplatform; version=1' }
   }
 
+  let(:api_client) { APIClient.first }
+
   describe 'spots search' do
     context 'with correct parameters' do
       it 'succeeds' do
         get '/spots/search',
-            params: { lat: '0', lng: '0' },
+            params: { lat: '0', lng: '0', token: api_client.token },
             headers: api_header
 
         expect(response.content_type).to eq('application/json')
@@ -17,7 +19,10 @@ RSpec.describe V1::SpotsController, type: :request do
 
     context 'with invalid parameters' do
       it 'returns an error' do
-        get '/spots/search', headers: api_header
+        get '/spots/search',
+            params: { token: api_client.token },
+            headers: api_header
+
         expect(response).to have_http_status(:bad_request)
       end
     end

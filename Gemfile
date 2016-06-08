@@ -22,12 +22,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Plugin for API versioning.
 gem 'versionist'
 
-# A higher level command-line oriented interface
-gem 'highline'
-
-# OpenBSD bcrypt() password hashing algorithm
-gem 'bcrypt'
-
 group :development, :test do
   gem 'byebug',                     platform: :mri
   gem 'factory_girl_rails'

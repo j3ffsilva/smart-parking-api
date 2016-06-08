@@ -19,10 +19,12 @@ ActiveRecord::Schema.define(version: 20160605150457) do
   enable_extension "earthdistance"
 
   create_table "api_clients", force: :cascade do |t|
-    t.string   "name"
-    t.string   "encrypted_token"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "name",       null: false
+    t.string   "token",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_api_clients_on_name", unique: true, using: :btree
+    t.index ["token"], name: "index_api_clients_on_token", unique: true, using: :btree
   end
 
   create_table "availability_schedules", force: :cascade do |t|

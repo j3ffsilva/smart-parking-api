@@ -1,6 +1,4 @@
 class V1::SpotsController < V1::BaseController
-  before_action :authenticate
-
   # Default search range, in meters.
   DEFAULT_RANGE = 2_000
 

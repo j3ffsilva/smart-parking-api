@@ -1,22 +1,17 @@
-class ApiClient < ApplicationRecord
-  # attr_accessor :unsecure_token, :decrypted_token
+class APIClient < ApplicationRecord
+  # Validations
+  validates :token, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
 
-  validates :encrypted_token, uniqueness: true
-  validates :name, presence: true
+  # Callbacks
+  before_validation :generate_token
 
-  before_create :generate_encrypted_token
-  # after_find :decrypt_token
-
-  def generate_encrypted_token
-    self.encrypted_token = loop do
+  # Generate a new API token for the client, making sure that the
+  # token is unique.
+  def generate_token
+    self.token = loop do
       token = SecureRandom.base64.tr('+/=', 'Qrt')
-      # self.unsecure_token = SecureRandom.base64.tr('+/=', 'Qrt')
-      # token = BCrypt::Password.create(unsecure_token)
-      break token unless ApiClient.where(encrypted_token: token).exists?
+      break token unless APIClient.where(token: token).exists?
     end
   end
-
-  # def decrypt_token
-  #   self.decrypted_token = BCrypt::Password.new(encrypted_token)
-  # end
 end

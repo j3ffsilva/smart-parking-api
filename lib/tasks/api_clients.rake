@@ -1,16 +1,19 @@
-require 'highline'
 namespace :api_clients do
   desc 'Create a user and output API key'
-  task create: :environment do
-    ui = HighLine.new
-    name = ui.ask('ApiClient name: ')
-    user = ApiClient.new(name: name)
-    if user.save
-      puts "Api Client '#{name}' created."
-      puts "Token: #{user.encrypted_token}"
+  task :create, [:name] => :environment do |_, args|
+    if args[:name].blank?
+      puts '[error] Please supply the name of the API client. ' \
+        'Example: rake api_clients:create["my-client"]'
+      next
+    end
+
+    client = APIClient.create(name: args[:name])
+
+    if client.persisted?
+      puts "Your API token is: #{client.token}"
     else
-      puts 'Problem creating user account:'
-      puts user.errors.full_messages
+      puts '[error] API client was not created. Errors:'
+      puts client.errors.full_messages
     end
   end
 end
