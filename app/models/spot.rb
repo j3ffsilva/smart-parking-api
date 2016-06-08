@@ -21,8 +21,13 @@ class Spot < ActiveRecord::Base
   validates :longitude, numericality: { greater_than_or_equal_to: -180,
                                         less_than_or_equal_to: 180 }
 
-  # Defines which attributes to use in the JSON API representation.
+  # Defines which attributes to include in the JSON API representation.
   def json_api_attrs(_options = {})
     %w(latitude longitude status)
+  end
+
+  # Defines which relationships to include in the JSON API representation.
+  def json_api_relations(_options = {})
+    %w(establishment)
   end
 end

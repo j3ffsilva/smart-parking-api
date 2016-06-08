@@ -24,6 +24,8 @@ en:
     request:
       errors:
         blank_token: 'Parameter :token is required'
+        establishment_not_found: 'Establishment not found'
         invalid_lat: 'Parameter :lat is not valid'
         invalid_lng: 'Parameter :lng is not valid'
         invalid_token: 'API token is not valid'
+        invalid_status: 'Status "%{status}" is not valid'
