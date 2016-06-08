@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::API
+  include TokenAuthentication
+
   protected
 
   # Adds a new error object to the request's errors.
-  #
   # @param error [Hash] the error object. It must be JSON API-conformant.
   def add_request_error(error = {})
     @errors ||= []

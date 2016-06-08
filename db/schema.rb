@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520210856) do
+ActiveRecord::Schema.define(version: 20160605150457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "cube"
   enable_extension "earthdistance"
+
+  create_table "api_clients", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "token",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_api_clients_on_name", unique: true, using: :btree
+    t.index ["token"], name: "index_api_clients_on_token", unique: true, using: :btree
+  end
 
   create_table "availability_schedules", force: :cascade do |t|
     t.integer  "spot_id",      null: false
