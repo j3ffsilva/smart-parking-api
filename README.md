@@ -31,48 +31,48 @@ to adapt some of the commands if this is not true.
 
 ```bash
 # Install PostgreSQL server and client
+sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib postgresql-client pgadmin3
+
+# Start the server
+sudo service postgresql start
 
 # Connect to PostgreSQL
 sudo -u postgres psql postgres
 
 # Inside the PostgreSQL shell, create the application user
 postgres=# CREATE USER smart_parking_user WITH PASSWORD 'smart_parking_pass' CREATEDB;
+postgres=# ALTER USER smart_parking_user WITH SUPERUSER;
+
+# Make sure the database templates use UTF-8
+postgres=# UPDATE pg_database SET datistemplate = FALSE WHERE datname = 'template1';
+postgres=# DROP DATABASE template1;
+postgres=# CREATE DATABASE template1 WITH TEMPLATE = template0 ENCODING = 'UNICODE';
+postgres=# UPDATE pg_database SET datistemplate = TRUE WHERE datname = 'template1';
+postgres=# \c template1
+postgres=# VACUUM FREEZE;
+
+# Quit
 postgres=# \q
-```
-
-##### Configuration of the earthdistance module
-
-We need to install [two contrib modules](http://www.postgresql.org/docs/8.3/static/earthdistance.html) from PostgreSQL, `cube` and
-`earthdistance`, that will allow us to calculate the distance between two
-points on the surface of the Earth.
-
-These extensions will be configured on a [template database](http://www.postgresql.org/docs/9.4/static/manage-ag-templatedbs.html)
-so that they are already enabled whenever we run `rake db:create`.
-
-To do that, enter the PostgreSQL shell again and run the following commands:
-
-```bash
-postgres=# CREATE DATABASE template2 TEMPLATE template1;
-postgres=# \c template2;
-postgres=# CREATE EXTENSION cube;
-postgres=# CREATE EXTENSION earthdistance;
-postgres=# UPDATE pg_database SET datistemplate = TRUE WHERE datname = 'template2';
 ```
 
 ### Project setup
 
-Now that you have all dependencies installed, you can setup the project with
-the following steps:
+Now that you have all dependencies installed, you can get the project up and
+running with the following steps:
 
 - Clone the project from GitLab
   ```bash
   # You can also clone using the SSH URL.
-  git clone https://gitlab.com/smart-city-platform/smart_parking_api.git
-  ``` 
+  git clone https://gitlab.com/smart-city-platform/smart_parking_api.git smart-city-platform/smart_parking_api
+  cd smart-city-platform/smart_parking_api
+  ```
 
 - Install Rails and all other gems
   ```bash
+  # This step is only necessary if you don't have Bundler installed.
+  gem install bundler
+  # This step is always necessary.
   bundle install
   ```
 
@@ -81,19 +81,36 @@ the following steps:
   overcommit --install
   overcommit --sign
   ```
+- Setup the database
+  ```bash
+  alias be="bundle exec"
+  be rake db:create && be rake db:migrate && be rake db:seed
+  ```
+
+- Create an API client and a token
+  ```bash
+  be rake api_clients:create["smart-parking-api-dev"]
+  ```
+  **IMPORTANT:** this Rake task outputs an API token. Take note of this token,
+  because you will need it to make API requests and/or to configure the
+  [smart_parking_maps](https://gitlab.com/smart-city-platform/smart_parking_maps) application.
 
 - Start the server
   ```bash
-  bundle exec rails server
+  # Port 3010 is the port convention for this application within the Smart City
+  # platform. Changing the port may cause other applications to fail.
+  bundle exec rails server -p 3010 -b 0.0.0.0
   ```
-  
-- Open http://localhost:3000/spots/search?lat=23&lng=23 in your browser
+
+- Open http://localhost:3010 in your browser. You should see the welcome page.
 
 ## Testing
 
 We use RSpec for our test suite. To run all tests, use the following command:
 ```
-bundle exec rspec
+# Seeding the database is only necessary the first time you run the tests.
+RAILS_ENV=test bundle exec rake db:seed
+RAILS_ENV=test bundle exec rspec
 ```
 
 ## Project phases
@@ -105,6 +122,14 @@ bundle exec rspec
   - Implement a basic (but easily extendable) API with a search endpoint (`/spots/search`)
 
 - **Issues**: see all issues that were planned (and delivered) for this phase [here](https://gitlab.com/smart-city-platform/smart_parking_api/issues?assignee_id=&author_id=&milestone_title=Phase+1&scope=all&sort=id_desc&state=all&issue_search=&).
+
+### Phase 2 (due June 8)
+
+- **Goals**:
+  - Integrate with [smart\_parking\_maps](https://gitlab.com/smart-city-platform/smart_parking_maps) application.
+  - Begin integration with other groups from the Smart City platform
+
+- **Issues**: see all issues that were planned (and delivered) for this phase [here](https://gitlab.com/smart-city-platform/smart_parking_api/issues?assignee_id=&author_id=&milestone_title=Phase+2&scope=all&sort=id_desc&state=all&issue_search=&).
 
 ## API Documentation
 
@@ -124,4 +149,3 @@ See our [wiki](https://gitlab.com/smart-city-platform/smart_parking_api/wikis/ho
 ## Contributing
 
 See our [contributing guidelines](https://gitlab.com/smart-city-platform/smart_parking_api/wikis/contributing)
-
