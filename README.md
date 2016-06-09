@@ -91,9 +91,9 @@ running with the following steps:
   ```bash
   be rake api_clients:create["smart-parking-api-dev"]
   ```
-  **IMPORTANT:** this Rake task outputs an API token. Take note of this token,
+  **IMPORTANT: this Rake task outputs an API token. Take note of this token,
   because you will need it to make API requests and/or to configure the
-  [smart_parking_maps](https://gitlab.com/smart-city-platform/smart_parking_maps) application.
+  [smart_parking_maps](https://gitlab.com/smart-city-platform/smart_parking_maps) application.**
 
 - Start the server
   ```bash
