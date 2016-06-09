@@ -25,7 +25,8 @@ before_script:
   - ruby -v
   - which ruby
   - gem install bundler --no-ri --no-rdoc
-  - bundle check || bundle install --jobs $(nproc) --path=/cache/bundler
+  - rm -rf /cache/bundler
+  - bundle install --jobs $(nproc) --path=/cache/bundler
   - RAILS_ENV=test bundle exec rake db:create
   - RAILS_ENV=test bundle exec rake db:migrate
   - RAILS_ENV=test bundle exec rake db:seed

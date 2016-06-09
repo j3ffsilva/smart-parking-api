@@ -26,4 +26,7 @@ describe AvailabilitySchedule do
       expect(schedule).to have(1).error_on(:to)
     end
   end
+
+  let(:as_schedulable) { build(:availability_schedule) }
+  it_behaves_like 'a schedulable model'
 end
