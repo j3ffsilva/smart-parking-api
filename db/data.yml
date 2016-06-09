@@ -68,7 +68,7 @@ spots:
       - <<: *_availability_teatro_municipal
 
   - parking_type: establishment
-    status: 0
+    status: 1
     is_outdoor: true
     is_preferential: false
     latitude: "-23.545443429752037"
@@ -95,7 +95,7 @@ spots:
       - <<: *_availability_teatro_municipal
 
   - parking_type: street
-    status: 0
+    status: -1
     is_outdoor: true
     is_preferential: false
     latitude: "-23.545059841144745"
@@ -130,7 +130,7 @@ spots:
   # Parking spots close to "Galeria do Rock"
 
   - parking_type: street
-    status: 0
+    status: 1
     is_outdoor: true
     is_preferential: false
     latitude: "-23.544027097024593"
@@ -140,7 +140,7 @@ spots:
     availability_schedules: []
 
   - parking_type: street
-    status: 0
+    status: 1
     is_outdoor: true
     is_preferential: false
     latitude: "-23.544082422808085"
