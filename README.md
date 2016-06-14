@@ -12,6 +12,11 @@ One such client is the
 [Smart Parking Maps](https://gitlab.com/smart-city-platform/smart_parking_maps)
 application, so be sure to check that one too!
 
+## Live demo
+
+A demo version of the application has been deployed to Heroku, and you can
+see it [here](http://smart-parking-api.herokuapp.com/).
+
 ## Development setup
 
 This section covers the necessary steps to get the application running on a
