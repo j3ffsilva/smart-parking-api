@@ -65,6 +65,11 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+group :production do
+  # Heroku
+  gem 'rails_12factor'
+end
+
 # More default Rails gems:
 
 # Use ActiveModel has_secure_password
