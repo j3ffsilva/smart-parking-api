@@ -193,6 +193,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_best_practices (1.16.0)
       activesupport
       code_analyzer (>= 0.4.3)
@@ -201,6 +204,8 @@ GEM
       json
       require_all
       ruby-progressbar
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.0.0.rc1)
       actionpack (= 5.0.0.rc1)
       activesupport (= 5.0.0.rc1)
@@ -281,6 +286,7 @@ DEPENDENCIES
   pry
   puma (~> 3.0)
   rails (>= 5.0.0.rc1, < 5.1)
+  rails_12factor
   rails_best_practices
   rblineprof
   rspec-collection_matchers

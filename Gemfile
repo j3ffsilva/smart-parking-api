@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Specify the Ruby version for Heroku
+ruby '2.3.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 
@@ -63,6 +66,11 @@ group :development do
 
   # Rails Console on the Browser.
   gem 'web-console', '~> 2.0'
+end
+
+group :production do
+  # Heroku
+  gem 'rails_12factor'
 end
 
 # More default Rails gems:
