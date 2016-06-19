@@ -14,8 +14,10 @@ AllCops:
     - 'config/initializers/backtrace_silencers.rb'
     - 'config/initializers/wrap_parameters.rb'
     - 'config/initializers/cors.rb'
+    - 'config/initializers/devise_token_auth.rb'
     - 'config/environments/development.rb'
     - 'db/schema.rb'
+    - 'db/migrate/20160619153201_devise_token_auth_create_users.rb'
 
 Lint/AmbiguousOperator:
   Enabled: false

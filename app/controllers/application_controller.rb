@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include DeviseTokenAuth::Concerns::SetUserByToken
   include TokenAuthentication
 
   skip_before_action :check_token_presence, :authenticate, only: :index
