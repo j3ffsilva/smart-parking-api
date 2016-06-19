@@ -91,6 +91,7 @@ GEM
       tzinfo (~> 1.1)
     arel (7.0.0)
     ast (2.2.0)
+    bcrypt (3.1.11)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -109,6 +110,15 @@ GEM
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     debugger-ruby_core_source (1.3.8)
+    devise (4.0.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
+    devise_token_auth (0.1.37)
+      devise (> 3.5.2, < 4.1)
+      rails (< 6)
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
@@ -131,6 +141,7 @@ GEM
       sexp_processor (~> 4.4)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hashie (3.4.4)
     i18n (0.7.0)
     iniparse (1.4.2)
     jbuilder (2.4.1)
@@ -156,6 +167,10 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    omniauth (1.3.1)
+      hashie (>= 1.2, < 4)
+      rack (>= 1.0, < 3)
+    orm_adapter (0.5.0)
     overcommit (0.33.0)
       childprocess (~> 0.5.8)
       iniparse (~> 1.4)
@@ -220,6 +235,8 @@ GEM
     rblineprof (0.3.6)
       debugger-ruby_core_source (~> 1.3)
     require_all (1.3.3)
+    responders (2.2.0)
+      railties (>= 4.2.0, < 5.1)
     rspec-collection_matchers (1.1.2)
       rspec-expectations (>= 2.99.0.beta1)
     rubocop (0.40.0)
@@ -255,6 +272,8 @@ GEM
       activesupport (>= 3)
       railties (>= 3)
       yard (~> 0.7)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -274,6 +293,8 @@ DEPENDENCIES
   binding_of_caller (~> 0.7.2)
   bullet
   byebug
+  devise
+  devise_token_auth
   factory_girl_rails
   faker
   flay
@@ -281,6 +302,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jbuilder-json_api
   listen
+  omniauth
   overcommit
   pg (~> 0.18)
   pry
@@ -301,5 +323,8 @@ DEPENDENCIES
   versionist
   web-console (~> 2.0)
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.12.4
+   1.12.5

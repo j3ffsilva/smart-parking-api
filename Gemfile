@@ -25,6 +25,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Plugin for API versioning.
 gem 'versionist'
 
+# Devise authentication
+gem 'devise'
+
+# Omniauth SSO
+gem 'omniauth'
+
+# Token based user Authentication
+gem 'devise_token_auth'
+
 group :development, :test do
   gem 'byebug',                     platform: :mri
   gem 'factory_girl_rails'
