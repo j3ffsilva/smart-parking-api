@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :omniauthable
   include DeviseTokenAuth::Concerns::User
+
+  # Associations
+  has_many :checkins
 end

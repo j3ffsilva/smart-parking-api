@@ -39,6 +39,17 @@ ActiveRecord::Schema.define(version: 20160619153201) do
     t.index ["spot_id"], name: "index_availability_schedules_on_spot_id", using: :btree
   end
 
+  create_table "checkins", force: :cascade do |t|
+    t.datetime "checkin_time"
+    t.datetime "checkout_time"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+    t.integer  "spot_id"
+    t.index ["spot_id"], name: "index_checkins_on_spot_id", using: :btree
+    t.index ["user_id"], name: "index_checkins_on_user_id", using: :btree
+  end
+
   create_table "establishments", force: :cascade do |t|
     t.string   "google_place_id", null: false
     t.datetime "created_at",      null: false
@@ -100,6 +111,8 @@ ActiveRecord::Schema.define(version: 20160619153201) do
   end
 
   add_foreign_key "availability_schedules", "spots"
+  add_foreign_key "checkins", "spots"
+  add_foreign_key "checkins", "users"
   add_foreign_key "pricing_schedules", "spots"
   add_foreign_key "spots", "establishments"
 end
