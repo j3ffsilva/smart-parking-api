@@ -10,7 +10,7 @@ gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 gem 'activerecord-postgres-earthdistance'
 
 # Build JSON APIs with JBuilder.
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', github: 'rails/jbuilder', branch: 'master'
 gem 'jbuilder-json_api'
 
 # Use PostgreSQL as the database for Active Record.
