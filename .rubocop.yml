@@ -17,7 +17,7 @@ AllCops:
     - 'config/initializers/devise_token_auth.rb'
     - 'config/environments/development.rb'
     - 'db/schema.rb'
-    - 'db/migrate/20160619153201_devise_token_auth_create_users.rb'
+    - 'db/migrate/*'
 
 Lint/AmbiguousOperator:
   Enabled: false
