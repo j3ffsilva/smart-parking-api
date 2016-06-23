@@ -29,5 +29,8 @@ Rails.application.routes.draw do
     # the JSON API plugin will render associations correctly.
     get '/establishments', to: redirect('/'), as: :establishments
     get '/establishments/:id', to: redirect('/'), as: :establishment
+
+    post '/incidents'      => 'incidents#create'
+    get  '/incidents/show' => 'incidents#show', as: :incident
   end
 end

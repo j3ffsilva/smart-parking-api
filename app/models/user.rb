@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
 
   # Associations
   has_many :checkins
+  has_many :incidents
 end
