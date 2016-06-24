@@ -3,7 +3,7 @@ class CreateIncidents < ActiveRecord::Migration[5.0]
     create_table :incidents do |t|
       t.references  :user,        index: true, foreign_key: true
       t.references  :spot,        index: true, foreign_key: true
-      t.string      :category,     null: false
+      t.integer     :category,     null: false
       t.string      :comment,      null: false
 
       t.timestamps

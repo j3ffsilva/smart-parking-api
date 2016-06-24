@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20160623030045) do
   create_table "incidents", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "spot_id"
-    t.string   "category",   null: false
+    t.integer  "category",   null: false
     t.string   "comment",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
