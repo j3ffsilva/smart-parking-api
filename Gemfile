@@ -34,6 +34,9 @@ gem 'omniauth'
 # Token based user Authentication
 gem 'devise_token_auth'
 
+# CORS
+gem 'rack-cors', require: 'rack/cors'
+
 group :development, :test do
   gem 'byebug',                     platform: :mri
   gem 'factory_girl_rails'

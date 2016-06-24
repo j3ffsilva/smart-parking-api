@@ -35,3 +35,9 @@ Style/EmptyLineBetweenDefs:
 
 Style/IfUnlessModifier:
   Enabled: false
+
+##################### Style #####################
+
+# Align the parameters of a method call if they span more than one line.
+Style/AlignParameters:
+  Enabled: false
