@@ -41,6 +41,8 @@ PreCommit:
 
   RailsBestPractices:
     enabled: true
+    exclude:
+      - app/controllers/devise_token_auth/*
 
   RailsSchemaUpToDate:
     enabled: true
