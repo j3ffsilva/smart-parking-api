@@ -1,6 +1,6 @@
 class V1::IncidentsController < V1::BaseController
   def incident_params
-    params.require(:incident).permit(:user, :spot, :category, :description)
+    params.require(:incident).permit(:user, :spot, :category, :comment)
   end
 
   def create
@@ -12,7 +12,7 @@ class V1::IncidentsController < V1::BaseController
     @incident = Incident.create(user: User.find(incident_params[:user]),
                                 spot: Spot.find(incident_params[:spot]),
                                 category: incident_params[:category],
-                                description: incident_params[:description])
+                                description: incident_params[:comment])
 
     check_pretty_render
   end

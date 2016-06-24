@@ -4,10 +4,10 @@ class Incident < ActiveRecord::Base
   belongs_to :spot
 
   # Validations
-  validates :category, :description, presence: true
+  validates :category, :comment, presence: true
 
   # Defines which attributes to include in the JSON API representation.
   def json_api_attrs(_options = {})
-    %w(category description)
+    %w(category comment)
   end
 end
