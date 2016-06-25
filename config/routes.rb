@@ -30,7 +30,12 @@ Rails.application.routes.draw do
     get '/establishments', to: redirect('/'), as: :establishments
     get '/establishments/:id', to: redirect('/'), as: :establishment
 
-    post '/incidents'      => 'incidents#create'
-    get  '/incidents/show' => 'incidents#show', as: :incident
+    get  '/incidents/last' => 'incidents#last'
+    get  '/incidents/:id' => 'incidents#show', as: :incident
+
+    get '/users', to: redirect('/'), as: :users
+    get '/users/:id', to: redirect('/'), as: :user
+
+    post '/incidents' => 'incidents#create'
   end
 end

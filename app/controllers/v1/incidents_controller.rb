@@ -4,25 +4,13 @@ class V1::IncidentsController < V1::BaseController
   end
 
   def create
-    if request_has_errors?
-      render status: :bad_request
-      return
-    end
-
     @incident = Incident.create(user: User.find(incident_params[:user]),
                                 spot: Spot.find(incident_params[:spot]),
                                 category: incident_params[:category],
-                                description: incident_params[:comment])
-
-    check_pretty_render
+                                comment: incident_params[:comment])
   end
-  def show
-    if request_has_errors?
-      render status: :bad_request
-      return
-    end
 
-    @incident = Incident.where(spot: params[:spot]).last
-    check_pretty_render
+  def last
+    @incident = Incident.where(spot_id: params[:spot]).last
   end
 end
