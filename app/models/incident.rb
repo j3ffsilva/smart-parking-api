@@ -25,17 +25,18 @@ class Incident < ActiveRecord::Base
   end
 
   def time_last_comment
-    seconds = Time.now - updated_at
+    seconds = (Time.now - updated_at).to_i
     minutes = (seconds / 60).to_i
     hours = (minutes / 60).to_i
     days = (hours / 24).to_i
     months = (days / 30).to_i
     years = (months / 12).to_i
-    time = years == 0 ? '' : years.to_s + ' year(s) ago'
-    time = months == 0 ? time : months.to_s + ' month(s) ago'
-    time = days == 0 ? time : days.to_s + ' day(s) ago'
-    time = hours == 0 ? time : hours.to_s + ' hour(s) ago'
+    time = seconds == 0 ? 'just now' : seconds.to_s + ' second(s) ago'
     time = minutes == 0 ? time : minutes.to_s + ' minute(s) ago'
-    time = seconds == 0 ? time : seconds.to_s + ' second(s) ago'
+    time = hours == 0 ? time : hours.to_s + ' hour(s) ago'
+    time = days == 0 ? time : days.to_s + ' day(s) ago'
+    time = months == 0 ? time : months.to_s + ' month(s) ago'
+    time = years == 0 ? time : years.to_s + ' year(s) ago'
+    time
   end
 end
