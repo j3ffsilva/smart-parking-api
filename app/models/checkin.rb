@@ -7,10 +7,10 @@ class Checkin < ActiveRecord::Base
   validates :user, :spot, :checked_in_at, presence: true
 
   # A user cannot check-in simultaneously to more than one spot
-  validate :user_cannot_simultaneosly_checkin
+  validate :user_cannot_simultaneosly_checkin, :on => :create
 
   # A spot cannot be simultaneously occupied by more than a user
-  validate :spot_cannot_simultaneosly_occupied
+  validate :spot_cannot_simultaneosly_occupied, :on => :create
 
   def user_cannot_simultaneosly_checkin
     c = Checkin.where(user_id: self.user_id, checked_out_at: nil)
@@ -19,7 +19,7 @@ class Checkin < ActiveRecord::Base
 
   def spot_cannot_simultaneosly_occupied
     c = Checkin.where(spot_id: self.spot_id)
-    if !c.pluck(:checked_in_at).nil
+    if !c.empty? && !c.pluck(:checked_in_at).empty? && c.pluck(:checked_out_at).empty?
       errors.add(:spot_id, 'Spot is been occupied')
     end
   end
