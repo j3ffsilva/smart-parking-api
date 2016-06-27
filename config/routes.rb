@@ -30,12 +30,15 @@ Rails.application.routes.draw do
     get '/establishments', to: redirect('/'), as: :establishments
     get '/establishments/:id', to: redirect('/'), as: :establishment
 
+    # REVIEW: user resource
+    post '/incidents'      => 'incidents#create'
     get  '/incidents/last' => 'incidents#last'
-    get  '/incidents/:id' => 'incidents#show', as: :incident
+    # REVISIT: 'incidents#show' doesn't exist.
+    get  '/incidents/:id'  => 'incidents#show', as: :incident
 
+    # REVIEW: these routes don't exist.
     get '/users', to: redirect('/'), as: :users
     get '/users/:id', to: redirect('/'), as: :user
 
-    post '/incidents' => 'incidents#create'
   end
 end

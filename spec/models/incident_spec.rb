@@ -22,7 +22,7 @@ describe Incident do
         eq(%w(category comment name_user time_last_comment))
     end
 
-    it 'includes users' do
+    it 'includes the user' do
       expect(build(:incident).json_api_relations).to include('user')
     end
   end
