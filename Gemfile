@@ -34,7 +34,8 @@ gem 'omniauth'
 # Token based user Authentication
 gem 'devise_token_auth'
 
-# CORS
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making
+# cross-origin AJAX possible.
 gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
@@ -92,7 +93,3 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making
-# cross-origin AJAX possible.
-# gem 'rack-cors'

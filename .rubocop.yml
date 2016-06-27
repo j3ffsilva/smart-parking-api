@@ -10,8 +10,8 @@ AllCops:
   # Exclude some default Rails files
   Exclude:
     - 'Rakefile'
-    - 'config/puma.rb'
     - 'app/controllers/devise_token_auth/*'
+    - 'config/puma.rb'
     - 'config/initializers/backtrace_silencers.rb'
     - 'config/initializers/wrap_parameters.rb'
     - 'config/initializers/cors.rb'
@@ -22,6 +22,8 @@ AllCops:
 
 Lint/AmbiguousOperator:
   Enabled: false
+
+##################### Style #####################
 
 Style/ClassAndModuleChildren:
   Enabled: false
@@ -35,8 +37,6 @@ Style/EmptyLineBetweenDefs:
 
 Style/IfUnlessModifier:
   Enabled: false
-
-##################### Style #####################
 
 # Align the parameters of a method call if they span more than one line.
 Style/AlignParameters:

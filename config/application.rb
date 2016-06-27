@@ -37,6 +37,8 @@ module SmartParkingApi
     config.api_only = true
 
     # Enable CORS for any host and any method.
+    # REVISIT: I think this is not necessary anymore, given the configuration
+    #          block below.
     config.action_dispatch.default_headers.merge!(
       'Access-Control-Allow-Origin' => '*',
       'Access-Control-Request-Method' => '*'
