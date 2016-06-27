@@ -19,13 +19,13 @@ class Checkin < ActiveRecord::Base
 
   def spot_cannot_simultaneosly_occupied
     c = Checkin.where(spot_id: self.spot_id)
-    if !c.empty? && !c.pluck(:checked_in_at).empty? && c.pluck(:checked_out_at).empty?
+    if !c.empty? && !c.pluck(:checked_in_at).empty? && c.pluck(:checked_out_at)[0].nil?
       errors.add(:spot_id, 'Spot is been occupied')
     end
   end
 
   # Defines which attributes to include in the JSON API representation.
   def json_api_attrs(_options = {})
-    %w(id  user_id spot_id checked_in_at checked_out_at)
+    %w(user_id spot_id checked_in_at checked_out_at)
   end
 end
