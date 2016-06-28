@@ -30,9 +30,9 @@ Rails.application.routes.draw do
     get '/establishments', to: redirect('/'), as: :establishments
     get '/establishments/:id', to: redirect('/'), as: :establishment
 
-    # checkins resource
-    post '/checkins' => 'checkins#create'
-    get '/checkins/search' => 'checkins#search', as: :checkin
-    post '/checkins/:id' => 'checkins#update'
+    # Checkins.
+    post '/checkins'        => 'checkins#create'
+    post '/checkins/:id'    => 'checkins#update'
+    get  '/checkins/search' => 'checkins#search', as: :checkin
   end
 end

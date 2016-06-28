@@ -4,6 +4,8 @@ RSpec.describe V1::CheckinsController, type: :request do
   }
 
   let(:api_client)            { APIClient.first }
+
+  # REVIEW: test fails if there's no user in the database.
   let(:default_params_create) { { checkin: { user_id: User.first.id,
                                              spot_id: Spot.first.id,
                                              checked_in_at: Time.now,

@@ -3,16 +3,16 @@ describe Checkin do
     expect(build(:checkin)).to be_valid
   end
 
-  it 'A user cannot check-in simultaneously to more than one spot' do
+  specify 'a user cannot check-in simultaneously to more than one spot' do
     user = create(:user)
     spot = create(:spot)
     checkin = create(:checkin, user_id: user.id, spot_id: spot.id, checked_in_at: Time.now, checked_out_at: nil)
     checkin_new = build(:checkin, user_id: user.id)
     checkin_new.user_cannot_simultaneosly_checkin
-    expect(checkin_new.errors[:user_id]).to include('User has Checkout pending')
+    expect(checkin_new.errors[:user_id]).to include('User has checkout pending')
   end
 
-  it 'A spot cannot be simultaneously occupied by more than a user' do
+  specify 'a spot cannot be simultaneously occupied by more than a user' do
     user1 = create(:user, email: 'emailtest1@testdomain.com', password: 'ewwasfasd')
     user2 = create(:user, email: 'emailtest2@testdomain.com', password: 'sdrtgtrew', reset_password_token: '1')
     spot = create(:spot)
