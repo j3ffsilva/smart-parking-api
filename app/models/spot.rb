@@ -10,6 +10,7 @@ class Spot < ActiveRecord::Base
   has_many   :availability_schedules
   has_many   :pricing_schedules
   has_many   :checkins
+  has_many   :incidents
 
   # Validations
   validates :parking_type, :status, :latitude, :longitude, presence: true
