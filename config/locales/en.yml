@@ -29,3 +29,5 @@ en:
         invalid_lng: 'Parameter :lng is not valid'
         invalid_token: 'API token is not valid'
         invalid_status: 'Status "%{status}" is not valid'
+        blank_incident: 'Parameter :incident is required'
+        spot_not_found: 'Spot not found'

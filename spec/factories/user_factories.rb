@@ -1,3 +1,4 @@
+# REVIEW: only define required attributes?
 FactoryGirl.define do
   factory :user do
     provider               'email'

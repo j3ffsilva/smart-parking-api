@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160619162958) do
+ActiveRecord::Schema.define(version: 20160623030045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,17 @@ ActiveRecord::Schema.define(version: 20160619162958) do
     t.string   "google_place_id", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "incidents", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "spot_id",    null: false
+    t.integer  "category",   null: false
+    t.string   "comment",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spot_id"], name: "index_incidents_on_spot_id", using: :btree
+    t.index ["user_id"], name: "index_incidents_on_user_id", using: :btree
   end
 
   create_table "pricing_schedules", force: :cascade do |t|
@@ -113,6 +124,8 @@ ActiveRecord::Schema.define(version: 20160619162958) do
   add_foreign_key "availability_schedules", "spots"
   add_foreign_key "checkins", "spots"
   add_foreign_key "checkins", "users"
+  add_foreign_key "incidents", "spots"
+  add_foreign_key "incidents", "users"
   add_foreign_key "pricing_schedules", "spots"
   add_foreign_key "spots", "establishments"
 end
