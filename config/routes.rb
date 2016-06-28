@@ -25,20 +25,13 @@ Rails.application.routes.draw do
     get '/spots/search' => 'spots#search'
     get '/spots/:id'    => 'spots#show', as: :spot
 
+    post '/incidents'          => 'incidents#create'
+    get  '/incidents/:spot_id' => 'incidents#index'
+
     # We don't implement these routes yet, but we need to define them so that
     # the JSON API plugin will render associations correctly.
-    get '/establishments', to: redirect('/'), as: :establishments
+    get '/establishments',     to: redirect('/'), as: :establishments
     get '/establishments/:id', to: redirect('/'), as: :establishment
-
-    # REVIEW: user resource
-    post '/incidents'      => 'incidents#create'
-    get  '/incidents/last' => 'incidents#last'
-    # REVISIT: 'incidents#show' doesn't exist.
-    get  '/incidents/:id'  => 'incidents#show', as: :incident
-
-    # REVIEW: these routes don't exist.
-    get '/users', to: redirect('/'), as: :users
-    get '/users/:id', to: redirect('/'), as: :user
-
+    get  '/incidents/:id',     to: redirect('/'), as: :incident
   end
 end
