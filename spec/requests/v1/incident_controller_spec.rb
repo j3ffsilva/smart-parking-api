@@ -3,8 +3,11 @@ RSpec.describe V1::IncidentsController, type: :request do
     { 'Accept' => 'application/vnd.smartcityplatform; version=1' }
   }
 
+  let(:api_client)            { APIClient.first }
+
   let(:default_params_create) {
     {
+      token: api_client.token,
       incident: {
         spot_id: Spot.first.id,
         category: 1,
@@ -32,7 +35,7 @@ RSpec.describe V1::IncidentsController, type: :request do
     context 'with correct parameter' do
       it 'succeeds' do
         get '/incidents/' + Spot.first.id.to_s,
-          headers: api_header
+          headers: api_header.merge(@auth_headers)
 
         expect(response.content_type).to eq('application/json')
         expect(response).to have_http_status(:success)
@@ -56,6 +59,7 @@ RSpec.describe V1::IncidentsController, type: :request do
       it 'returns error when a spot is incorrect' do
         post '/incidents',
           params: {
+            token: api_client.token,
             incident: {
               spot_id: 's',
               category: 0,
@@ -73,6 +77,7 @@ RSpec.describe V1::IncidentsController, type: :request do
       it 'returns error' do
         post '/incidents',
           params: {
+            token: api_client.token,
             incident: {
               spot_id: Spot.first.id,
               category: -1,

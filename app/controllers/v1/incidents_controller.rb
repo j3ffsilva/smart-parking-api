@@ -5,21 +5,11 @@ class V1::IncidentsController < V1::BaseController
 
   # Retrieve a spot's incidents.
   def index
-    if params[:spot_id].empty?
-      render status: :bad_request
-      return
-    end
-
     @incidents = Incident.where(spot_id: params[:spot_id])
   end
 
   # Create a new incident.
   def create
-    if request_has_errors?
-      render status: :bad_request
-      return
-    end
-
     @incident = Incident.new(parse_incident_params)
 
     unless @incident.save
@@ -35,10 +25,6 @@ class V1::IncidentsController < V1::BaseController
   ##
   # Parse incident parameters and convert them to internal values.
   def parse_incident_params
-    if params[:incident].nil?
-      add_request_error(title: I18n.t('api.request.errors.blank_incident'))
-    end
-
     create_params = params
                     .require(:incident)
                     .permit(:spot_id, :category, :comment)
