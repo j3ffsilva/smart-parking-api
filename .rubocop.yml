@@ -10,18 +10,21 @@ AllCops:
   # Exclude some default Rails files
   Exclude:
     - 'Rakefile'
+    - 'app/controllers/devise_token_auth/*'
     - 'config/puma.rb'
     - 'config/initializers/backtrace_silencers.rb'
     - 'config/initializers/wrap_parameters.rb'
     - 'config/initializers/cors.rb'
     - 'config/initializers/devise_token_auth.rb'
     - 'config/environments/development.rb'
+    - 'db/migrate/*'
     - 'db/schema.rb'
     - 'db/spots.yml'
-    - 'db/migrate/20160619153201_devise_token_auth_create_users.rb'
 
 Lint/AmbiguousOperator:
   Enabled: false
+
+##################### Style #####################
 
 Style/ClassAndModuleChildren:
   Enabled: false
@@ -34,4 +37,8 @@ Style/EmptyLineBetweenDefs:
   Enabled: false
 
 Style/IfUnlessModifier:
+  Enabled: false
+
+# Align the parameters of a method call if they span more than one line.
+Style/AlignParameters:
   Enabled: false
