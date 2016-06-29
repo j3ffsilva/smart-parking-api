@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160623030045) do
+ActiveRecord::Schema.define(version: 20160625181610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,8 +89,10 @@ ActiveRecord::Schema.define(version: 20160623030045) do
     t.decimal  "longitude",        precision: 15, scale: 12, null: false
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
+    t.text     "reference"
     t.index "ll_to_earth((latitude)::double precision, (longitude)::double precision)", name: "spots_earthdistance_ix", using: :gist
     t.index ["establishment_id"], name: "index_spots_on_establishment_id", using: :btree
+    t.index ["latitude", "longitude"], name: "index_spots_on_latitude_and_longitude", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|

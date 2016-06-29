@@ -23,6 +23,10 @@ class Spot < ActiveRecord::Base
   validates :longitude, numericality: { greater_than_or_equal_to: -180,
                                         less_than_or_equal_to: 180 }
 
+  def self.search(args)
+    Spot::Search.new.search(args)
+  end
+
   # Defines which attributes to include in the JSON API representation.
   def json_api_attrs(_options = {})
     %w(latitude longitude status parking_type formatted_details google_establishment_id)

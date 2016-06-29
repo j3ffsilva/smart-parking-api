@@ -10,20 +10,8 @@ class V1::SpotsController < V1::BaseController
       return
     end
 
-    # Perform actual search.
-    @spots = Spot.within_radius(*search_params.fetch_values(:range, :lat, :lng))
-
-    if search_params[:google_place_id]
-      @spots = @spots
-               .joins(:establishment)
-               .where(
-                'establishments.google_place_id' => search_params[:google_place_id]
-                )
-    end
-
-    if search_params[:statuses]
-      @spots = @spots.where(status: search_params[:statuses])
-    end
+    # Search for spots.
+    @spots = Spot.search(search_params)
 
     # Set request metadata.
     @meta = search_params.merge(
