@@ -36,9 +36,10 @@ Rails.application.routes.draw do
 
     # We don't implement these routes yet, but we need to define them so that
     # the JSON API plugin will render associations correctly.
+    get '/checkins/pending',   to: redirect('/'), as: :checkin
     get '/establishments',     to: redirect('/'), as: :establishments
     get '/establishments/:id', to: redirect('/'), as: :establishment
-    get '/incidents/:id',     to: redirect('/'), as: :incident
+    get '/incidents/:id',      to: redirect('/'), as: :incident
     get '/spots',              to: redirect('/'), as: :spots
   end
 end
