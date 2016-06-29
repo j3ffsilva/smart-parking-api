@@ -30,14 +30,15 @@ Rails.application.routes.draw do
     get  '/incidents/:spot_id' => 'incidents#index'
 
     # Checkins.
-    post '/checkins'        => 'checkins#create'
-    post '/checkins/:id'    => 'checkins#update'
-    get  '/checkins/search' => 'checkins#search', as: :checkin
+    post '/checkins'          => 'checkins#create'
+    get  '/checkins/pending'  => 'checkins#pending'
+    post '/checkins/checkout' => 'checkins#checkout'
 
     # We don't implement these routes yet, but we need to define them so that
     # the JSON API plugin will render associations correctly.
     get '/establishments',     to: redirect('/'), as: :establishments
     get '/establishments/:id', to: redirect('/'), as: :establishment
-    get  '/incidents/:id',     to: redirect('/'), as: :incident
+    get '/incidents/:id',     to: redirect('/'), as: :incident
+    get '/spots',              to: redirect('/'), as: :spots
   end
 end

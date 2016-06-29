@@ -1,43 +1,54 @@
 class V1::CheckinsController < V1::BaseController
+  before_action :authenticate_user!
+
   def create
-    # REVIEW: check for errors on create.
-    @checkin = Checkin.create(post_checkin_params)
-    # REVIEW: remove unused code.
-    #@checkin.save!
+    if request_has_errors?
+      render status: :bad_request
+      return
+    end
+
+    @checkin = Checkin.new(create_checkin_params)
+
+    unless @checkin.save
+      @checkin.errors.full_messages.each do |msg|
+        add_request_error(title: msg)
+      end
+      render status: :unprocessable_entity
+    end
   end
 
-  def search
-    # REVIEW: use active record.
-    # REVIEW: this is not a "search", so the action name could be improved.
-    condition = 'user_id = ? AND checked_out_at is null'
-    @checkin = Checkin.where(condition, params[:user_id].to_i)
+  def pending
+    @checkin = Checkin.where(user: current_user, checked_out_at: nil).first || Checkin.new
+    render action: :create
   end
 
-  def update
-    # REVIEW: check for errors.
-    @checkin = Checkin.find(params[:id].to_i)
-    @checkin.update_attributes(put_checkin_params)
+  def checkout
+    @checkin = Checkin.where(user: current_user, checked_out_at: nil).first
+
+    unless @checkin
+      render status: :bad_request
+      return
+    end
+
+    unless @checkin.update_attributes(checked_out_at: Time.zone.now)
+      @checkin.errors.full_messages.each do |msg|
+        add_request_error(title: msg)
+      end
+      render status: :unprocessable_entity
+    end
   end
 
   private
 
-  # REVIEW: shouldn't this meethod be called checkout_params?
-  # REVIEW: it's not necessary to put the HTTP method on the method name.
-  def put_checkin_params
-    {
-      checked_out_at: Time.new
-    }
-  end
+  def create_checkin_params
+    unless (spot = Spot.where(id: params[:spot_id]).first)
+      add_request_error(title: I18n.t('api.request.errors.spot_not_found'))
+    end
 
-  # REVIEW: it's not necessary to put the HTTP method on the method name.
-  def post_checkin_params
-    # REVIEW: validate these params.
     {
-      user_id: params[:user_id],
-      spot_id: params[:spot_id],
-      checked_in_at: Time.new,
-      # REVIEW: if it's nil, it's not necessary to declare this key.
-      checked_out_at: ''
+      user_id:       current_user.id,
+      spot_id:       (spot || Spot.new).id,
+      checked_in_at: Time.zone.now,
     }
   end
 end
