@@ -2,10 +2,10 @@
 FactoryGirl.define do
   factory :user do
     provider               'email'
-    uid                    'testemail2@mydomain.com'
+    uid                    { Faker::Internet.email }
     password               'sdfasfasd'
     encrypted_password     ''
-    reset_password_token   ''
+    reset_password_token   nil
     reset_password_sent_at DateTime.current
     remember_created_at    DateTime.current
     sign_in_count          0
@@ -20,7 +20,7 @@ FactoryGirl.define do
     name                   'aaaa'
     nickname               ''
     image                  ''
-    email                  'testemail2@mydomain.com'
+    email                  { Faker::Internet.email }
     tokens                 {}
   end
 end

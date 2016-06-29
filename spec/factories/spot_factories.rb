@@ -5,8 +5,8 @@ FactoryGirl.define do
     status          Spot::SPOT_STATUSES[:available]
     is_outdoor      true
     is_preferential false
-    latitude        -23.5505
-    longitude       -46.6333
+    latitude        { Faker::Address.latitude }
+    longitude       { Faker::Address.longitude }
 
     trait :invalid_status do
       status 500

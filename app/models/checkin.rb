@@ -19,7 +19,7 @@ class Checkin < ActiveRecord::Base
 
   def spot_is_not_occupied
     c = Checkin.where(spot_id: self.spot_id, checked_out_at: nil)
-    errors.add(:user_id, 'Spot is taken') unless c.empty?
+    errors.add(:spot_id, 'Spot is taken') unless c.empty?
   end
 
   # Defines which attributes to include in the JSON API representation.

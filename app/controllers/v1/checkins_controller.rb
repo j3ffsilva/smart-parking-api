@@ -2,11 +2,6 @@ class V1::CheckinsController < V1::BaseController
   before_action :authenticate_user!
 
   def create
-    if request_has_errors?
-      render status: :bad_request
-      return
-    end
-
     @checkin = Checkin.new(create_checkin_params)
 
     unless @checkin.save
@@ -26,16 +21,11 @@ class V1::CheckinsController < V1::BaseController
     @checkin = Checkin.where(user: current_user, checked_out_at: nil).first
 
     unless @checkin
-      render status: :bad_request
+      render action: :create, status: :bad_request
       return
     end
 
-    unless @checkin.update_attributes(checked_out_at: Time.zone.now)
-      @checkin.errors.full_messages.each do |msg|
-        add_request_error(title: msg)
-      end
-      render status: :unprocessable_entity
-    end
+    render action: :create
   end
 
   private
