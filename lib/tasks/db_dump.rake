@@ -1,5 +1,3 @@
-require 'byebug'
-
 def serialize_schedule(schedule)
   attrs = schedule.attributes.select do |k, _|
     k.in? %(from to begin_time end_time is_available price)
