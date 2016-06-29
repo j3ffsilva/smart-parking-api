@@ -28,16 +28,21 @@ Rails.application.configure do
   end
 
   # Gmail account config
-  config.action_mailer.default_url_options = { host: 'http://localhost', port: 3010 }
+  config.action_mailer.default_url_options = {
+    host: 'http://localhost',
+    port: 3010
+  }
+
   config.action_mailer.delivery_method = :smtp
+
   config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'gmail.com',
-  user_name:            'smart.parking.maps@gmail.com',
-  password:             'sdpf09qu3r9023u',
-  authentication:       'plain',
-  enable_starttls_auto: true,
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    user_name:            'smart.parking.maps@gmail.com',
+    password:             Rails.application.secrets.gmail_password,
+    authentication:       'plain',
+    enable_starttls_auto: true,
   }
 
   # Don't care if the mailer can't send.
