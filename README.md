@@ -136,6 +136,16 @@ RAILS_ENV=test bundle exec rspec
 
 - **Issues**: see all issues that were planned (and delivered) for this phase [here](https://gitlab.com/smart-city-platform/smart_parking_api/issues?assignee_id=&author_id=&milestone_title=Phase+2&scope=all&sort=id_desc&state=all&issue_search=&).
 
+### Phase 3 (due June 29)
+
+- **Goals**:
+  - Integrate with [smart\_parking\_maps](https://gitlab.com/smart-city-platform/smart_parking_maps) application.
+  - Improve search
+  - Add new features (checkin, incident reports, user registration and authentication)
+
+- **Issues**: see all issues that were planned (and delivered) for this phase [here](https://gitlab.com/smart-city-platform/smart_parking_api/issues?assignee_id=&author_id=&milestone_title=Phase+3&scope=all&sort=id_desc&state=all&issue_search=&).
+
+
 ## API Documentation
 
 See the detailed
