@@ -2,7 +2,7 @@ class Spot
   class Search
     # If true, all searches will be local and NOT use the Platform's services.
     # We'll change this flag to false after integration is finished.
-    FORCE_LOCAL = true
+    FORCE_LOCAL = false
 
     ##
     # Search for spots matching the desired criteria.
@@ -26,6 +26,9 @@ class Spot
       return false unless discovery_results[:success]
 
       spots = merge_components({}, discovery_results)
+
+      # TODO: decide if we want to keep this.
+      @args[:statuses] = [0, 1]
 
       if @args[:statuses]
         uuids = discovery_results[:data].map { |c| c['uuid'] }
@@ -68,10 +71,12 @@ class Spot
     # Given a spots hash, indexed by their uuids, and remote results,
     # merge results into the original hash using the uuid as key.
     def merge_components(spots, results)
+      has_spots = spots.any?
+
       results[:data].each do |component|
         if spots[component['uuid']]
           spots[component['uuid']].merge!(component)
-        elsif spots.any?
+        elsif has_spots
           raise "Unmatched component: #{component['uuid']}"
         else
           spots[component['uuid']] = component
@@ -86,7 +91,15 @@ class Spot
       param_pairs = []
       latlngs     = []
 
+      # TODO: improve the performance on this loop.
       remote_components.values.each do |hsh|
+        spot = Spot.where("(latitude, longitude) IN ((?,?))", *[hsh['lat'], hsh['lon']]).first
+        if spot
+          spot.update_attributes!(status: hsh['capabilities']['spot_availability'][0]['value'])
+        else
+          Rails.logger.warn("Could not find spot: (#{hsh['lat']}, #{hsh['lon']})")
+        end
+
         param_pairs << '(?, ?)'
         latlngs << hsh['lat']
         latlngs << hsh['lon']

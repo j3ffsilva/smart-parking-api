@@ -23,5 +23,10 @@ test:
   smart_parking_maps: "localhost:3011"
 
 production:
+  resource_adapter: "107.170.158.70:3001"
+  resources_catalog: "107.170.158.70:3000"
+  data_collector: "107.170.158.70:3002"
+  discovery_service: "107.170.158.70:3004"
+
   smart_parking_api: "smart-parking-api.herokuapp.com"
   smart_parking_maps: "smart-parking-maps.herokuapp.com"

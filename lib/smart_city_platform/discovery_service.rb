@@ -9,7 +9,7 @@ module SmartCityPlatform
         capability: :spot_availability,
         lat:        params[:lat],
         lon:        params[:lng],
-        radius:     params[:range]
+        radius:     params[:range] / 1.60934 # convert to miles!
       })
 
       components = JSON.load(response)['resources']
