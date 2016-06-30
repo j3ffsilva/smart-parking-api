@@ -19,11 +19,7 @@ describe Incident do
   describe 'methods for the JSON API gem' do
     it 'has attributes that are used for its JSON API representation' do
       expect(build(:incident).json_api_attrs).to \
-        eq(%w(category comment name_user time_last_comment))
-    end
-
-    it 'includes the user' do
-      expect(build(:incident).json_api_relations).to include('user')
+        eq(%w(category comment human_created_at))
     end
   end
 end

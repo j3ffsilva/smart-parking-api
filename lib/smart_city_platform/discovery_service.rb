@@ -20,7 +20,8 @@ module SmartCityPlatform
         [error] Could not perform search with Discovery Service.
           Reason: #{ex.message}
       ERR
-      Rails.logger.error(error_message.strip)
+      error_message = error_message.strip
+      Rails.logger.error(error_message)
       { success: false }
     end
   end
